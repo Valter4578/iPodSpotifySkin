@@ -7,12 +7,9 @@
 
 import Foundation
 import SwiftUI
+import UIKit
 
-protocol SpotifyServiceProtocol {
-    func connect()
-}
-
-class SpotifyService: NSObject, SpotifyServiceProtocol, ObservableObject  {
+class SpotifyService: NSObject, ObservableObject  {
     
     // MARK: - Variables
     private let SpotifyClientID = "6c212878ea394187a8a11c2a1f0c5d5d"
@@ -54,6 +51,33 @@ class SpotifyService: NSObject, SpotifyServiceProtocol, ObservableObject  {
     func connect() {
         sessionManager?.initiateSession(with: scopes, options: .clientOnly)
     }
+    
+    func disconnect() {
+        if (appRemote.isConnected) {
+            appRemote.disconnect()
+        }
+    }
+    
+    func fetchAlbumCover(for track:SPTAppRemoteTrack, completionHandler: @escaping (Image) -> ()) {
+        appRemote.imageAPI?.fetchImage(forItem: track, with: CGSize.zero, callback: { (image, error) in
+            if let error = error {
+                print("Error fetching track image: " + error.localizedDescription)
+            } else if let image = image as? UIImage {
+                completionHandler(Image(uiImage: image))
+            }
+        })
+    }
+    
+    func fetchPlayerState() {
+        appRemote.playerAPI?.getPlayerState({ [weak self] (playerState, error) in
+            if let error = error {
+                print("Error getting player state:" + error.localizedDescription)
+            } else if let playerState = playerState as? SPTAppRemotePlayerState {
+                print(playerState)
+                self?.lastPlayerState = playerState
+            }
+        })
+    }
 }
 
 // MARK: - SPTAppRemoteDelegate
@@ -79,7 +103,6 @@ extension SpotifyService: SPTAppRemoteDelegate, SPTAppRemotePlayerStateDelegate 
     func playerStateDidChange(_ playerState: SPTAppRemotePlayerState) {
         debugPrint("Track name: %@", playerState.track.name)
     }
-    
 }
 
 // MARK: - SPTSessionManagerDelegate
