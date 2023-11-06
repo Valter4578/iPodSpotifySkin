@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct iPodSkinApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
-
+    @EnvironmentObject var spotifyService: SpotifyService
     var body: some Scene {
         WindowGroup {
             ContentView()
