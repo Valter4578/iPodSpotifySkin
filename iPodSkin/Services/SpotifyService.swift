@@ -32,6 +32,9 @@ class SpotifyService: NSObject, ObservableObject  {
     lazy var appRemote: SPTAppRemote = {
         let appRemote = SPTAppRemote(configuration: self.configuration, logLevel: .debug)
         appRemote.delegate = self
+        if let accessToken = UserDefaults.standard.string(forKey: "spotifyAccessToken") {
+            appRemote.connectionParameters.accessToken = accessToken
+        }
         return appRemote
     }()
     
@@ -85,7 +88,7 @@ class SpotifyService: NSObject, ObservableObject  {
         if let access_token = parameters?[SPTAppRemoteAccessTokenKey] {
             appRemote.connectionParameters.accessToken = access_token
             self.accessToken = access_token
-//            UserDefaults.setValue(access_token, forKey: "spotifyAccessToken")
+            UserDefaults.standard.set(accessToken, forKey: "spotifyAccessToken")
             appRemote.connect()
         } else if let error_description = parameters?[SPTAppRemoteErrorDescriptionKey] {
             print(error_description)
