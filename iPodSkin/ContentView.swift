@@ -8,17 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var spotifyService: SpotifyService
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+        Button(action: {
+            spotifyService.connect()
+        }, label: {
+            Text("connect to spotify")
+        })
+        .background(.green)
+        .frame(width: 100, height: 100)
     }
 }
 
 #Preview {
     ContentView()
+        .environmentObject(SpotifyService())
 }

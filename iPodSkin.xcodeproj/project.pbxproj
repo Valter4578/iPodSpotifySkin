@@ -14,6 +14,7 @@
 		88A1E1382AF7746500E93557 /* SpotifyiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88A1E1372AF7746500E93557 /* SpotifyiOS.framework */; };
 		88A1E1412AF787E900E93557 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A1E1402AF787E900E93557 /* SceneDelegate.swift */; };
 		88A1E1432AF79E9100E93557 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A1E1422AF79E9100E93557 /* AppDelegate.swift */; };
+		88A1E1462AF8A93A00E93557 /* SpotifyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A1E1452AF8A93A00E93557 /* SpotifyService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		88A1E13A2AF7789A00E93557 /* iPodSkin-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iPodSkin-Bridging-Header.h"; sourceTree = "<group>"; };
 		88A1E1402AF787E900E93557 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		88A1E1422AF79E9100E93557 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		88A1E1452AF8A93A00E93557 /* SpotifyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 		88A1E1282AF7721B00E93557 /* iPodSkin */ = {
 			isa = PBXGroup;
 			children = (
+				88A1E1442AF8A93200E93557 /* Services */,
 				88A1E1392AF7755E00E93557 /* Info.plist */,
 				88A1E1292AF7721B00E93557 /* iPodSkinApp.swift */,
 				88A1E12B2AF7721B00E93557 /* ContentView.swift */,
@@ -79,6 +82,14 @@
 				88A1E1302AF7721C00E93557 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		88A1E1442AF8A93200E93557 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				88A1E1452AF8A93A00E93557 /* SpotifyService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +162,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88A1E1462AF8A93A00E93557 /* SpotifyService.swift in Sources */,
 				88A1E1432AF79E9100E93557 /* AppDelegate.swift in Sources */,
 				88A1E12C2AF7721B00E93557 /* ContentView.swift in Sources */,
 				88A1E1412AF787E900E93557 /* SceneDelegate.swift in Sources */,
@@ -290,6 +302,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"iPodSkin/Preview Content\"";
 				DEVELOPMENT_TEAM = 44ZWCLCJ2W;
 				ENABLE_PREVIEWS = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/iPodSkin",
