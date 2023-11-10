@@ -18,15 +18,7 @@ struct iPodSkinApp: App {
             ContentView()
                 .environmentObject(spotifyService)
                 .onOpenURL { url in
-//                    let parameters = spotifyService.appRemote.authorizationParameters(from: url)
-//                    if let code = parameters?["code"] {
-//                        spotifyService.responseCode = code
-//                    } else if let access_token = parameters?[SPTAppRemoteAccessTokenKey] {
-//                        spotifyService.accessTokenKey = access_token
-//                    } else if let error_description = parameters?[SPTAppRemoteErrorDescriptionKey] {
-//                        print("No access token error =", error_description)
-//                    }
-                    spotifyService.fetchAccessToken(from: url)
+                    spotifyService.handleAccessToken(from: url)
                 }
         }
     }
