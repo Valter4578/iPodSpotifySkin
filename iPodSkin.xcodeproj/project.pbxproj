@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8820955E2AFE1E1600CD3A46 /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8820955D2AFE1E1600CD3A46 /* HomeScreenView.swift */; };
 		88A1E12A2AF7721B00E93557 /* iPodSkinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A1E1292AF7721B00E93557 /* iPodSkinApp.swift */; };
 		88A1E12C2AF7721B00E93557 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A1E12B2AF7721B00E93557 /* ContentView.swift */; };
 		88A1E12E2AF7721C00E93557 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88A1E12D2AF7721C00E93557 /* Assets.xcassets */; };
@@ -15,9 +16,12 @@
 		88A1E1412AF787E900E93557 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A1E1402AF787E900E93557 /* SceneDelegate.swift */; };
 		88A1E1432AF79E9100E93557 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A1E1422AF79E9100E93557 /* AppDelegate.swift */; };
 		88A1E1462AF8A93A00E93557 /* SpotifyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A1E1452AF8A93A00E93557 /* SpotifyService.swift */; };
+		88F6159E2B03C68600D4A751 /* ControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F6158B2B03C68500D4A751 /* ControlView.swift */; };
+		88F6159F2B03C68600D4A751 /* ActionButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F6158C2B03C68500D4A751 /* ActionButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8820955D2AFE1E1600CD3A46 /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
 		88A1E1262AF7721B00E93557 /* iPodSkin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPodSkin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88A1E1292AF7721B00E93557 /* iPodSkinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPodSkinApp.swift; sourceTree = "<group>"; };
 		88A1E12B2AF7721B00E93557 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -29,6 +33,8 @@
 		88A1E1402AF787E900E93557 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		88A1E1422AF79E9100E93557 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88A1E1452AF8A93A00E93557 /* SpotifyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyService.swift; sourceTree = "<group>"; };
+		88F6158B2B03C68500D4A751 /* ControlView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlView.swift; sourceTree = "<group>"; };
+		88F6158C2B03C68500D4A751 /* ActionButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +49,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8820955B2AFE1E0000CD3A46 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				8820955C2AFE1E0B00CD3A46 /* HomeScreen */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		8820955C2AFE1E0B00CD3A46 /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8820955D2AFE1E1600CD3A46 /* HomeScreenView.swift */,
+			);
+			path = HomeScreen;
+			sourceTree = "<group>";
+		};
 		88A1E11D2AF7721B00E93557 = {
 			isa = PBXGroup;
 			children = (
@@ -63,12 +85,14 @@
 		88A1E1282AF7721B00E93557 /* iPodSkin */ = {
 			isa = PBXGroup;
 			children = (
+				88F6156F2B03C5F200D4A751 /* Views */,
+				88A1E1372AF7746500E93557 /* SpotifyiOS.framework */,
 				88A1E1442AF8A93200E93557 /* Services */,
 				88A1E1392AF7755E00E93557 /* Info.plist */,
 				88A1E1292AF7721B00E93557 /* iPodSkinApp.swift */,
 				88A1E12B2AF7721B00E93557 /* ContentView.swift */,
+				8820955B2AFE1E0000CD3A46 /* Modules */,
 				88A1E12D2AF7721C00E93557 /* Assets.xcassets */,
-				88A1E1372AF7746500E93557 /* SpotifyiOS.framework */,
 				88A1E12F2AF7721C00E93557 /* Preview Content */,
 				88A1E1402AF787E900E93557 /* SceneDelegate.swift */,
 				88A1E1422AF79E9100E93557 /* AppDelegate.swift */,
@@ -90,6 +114,23 @@
 				88A1E1452AF8A93A00E93557 /* SpotifyService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		88F6156F2B03C5F200D4A751 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				88F615AA2B03C6B600D4A751 /* ControlView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		88F615AA2B03C6B600D4A751 /* ControlView */ = {
+			isa = PBXGroup;
+			children = (
+				88F6158C2B03C68500D4A751 /* ActionButtonView.swift */,
+				88F6158B2B03C68500D4A751 /* ControlView.swift */,
+			);
+			path = ControlView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,7 +206,10 @@
 				88A1E1462AF8A93A00E93557 /* SpotifyService.swift in Sources */,
 				88A1E1432AF79E9100E93557 /* AppDelegate.swift in Sources */,
 				88A1E12C2AF7721B00E93557 /* ContentView.swift in Sources */,
+				8820955E2AFE1E1600CD3A46 /* HomeScreenView.swift in Sources */,
 				88A1E1412AF787E900E93557 /* SceneDelegate.swift in Sources */,
+				88F6159E2B03C68600D4A751 /* ControlView.swift in Sources */,
+				88F6159F2B03C68600D4A751 /* ActionButtonView.swift in Sources */,
 				88A1E12A2AF7721B00E93557 /* iPodSkinApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
