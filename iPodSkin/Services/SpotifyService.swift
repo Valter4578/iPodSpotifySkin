@@ -17,24 +17,24 @@ class SpotifyService: NSObject, ObservableObject  {
     var accessToken = ""
     private let secterKey = "7448a7dd574f4906b7d44f1308d214b7"
     
-    private let scopes: SPTScope = [
-                                .userReadEmail, .userReadPrivate,
-                                .userReadPlaybackState, .userModifyPlaybackState, .userReadCurrentlyPlaying,
-                                .streaming, .appRemoteControl,
-                                .playlistReadCollaborative, .playlistModifyPublic, .playlistReadPrivate, .playlistModifyPrivate,
-                                .userLibraryModify, .userLibraryRead,
-                                .userTopRead, .userReadPlaybackState, .userReadCurrentlyPlaying,
-                                .userFollowRead, .userFollowModify
-                            ]
+    private let stringScopes = [
+                            "user-read-email", "user-read-private",
+                            "user-read-playback-state", "user-modify-playback-state", "user-read-currently-playing",
+                            "streaming", "app-remote-control",
+                            "playlist-read-collaborative", "playlist-modify-public", "playlist-read-private", "playlist-modify-private",
+                            "user-library-modify", "user-library-read",
+                            "user-top-read", "user-read-playback-position", "user-read-recently-played",
+                            "user-follow-read", "user-follow-modify",
+                        ]
 
     var playURI = ""
     
     lazy var appRemote: SPTAppRemote = {
         let appRemote = SPTAppRemote(configuration: self.configuration, logLevel: .debug)
         appRemote.delegate = self
-        if let accessToken = UserDefaults.standard.string(forKey: "spotifyAccessToken") {
-            appRemote.connectionParameters.accessToken = accessToken
-        }
+//        if let accessToken = UserDefaults.standard.string(forKey: "spotifyAccessToken") {
+//            appRemote.connectionParameters.accessToken = accessToken
+//        }
         return appRemote
     }()
     
@@ -48,7 +48,7 @@ class SpotifyService: NSObject, ObservableObject  {
     // MARK: - Functions
     func connect() {
         guard let _ = self.appRemote.connectionParameters.accessToken else {
-            self.appRemote.authorizeAndPlayURI("")
+            self.appRemote.authorizeAndPlayURI("", asRadio: false, additionalScopes: stringScopes)
             return
         }
         
@@ -88,6 +88,7 @@ class SpotifyService: NSObject, ObservableObject  {
         if let access_token = parameters?[SPTAppRemoteAccessTokenKey] {
             appRemote.connectionParameters.accessToken = access_token
             self.accessToken = access_token
+            print("Access token:", accessToken)
             UserDefaults.standard.set(accessToken, forKey: "spotifyAccessToken")
             appRemote.connect()
         } else if let error_description = parameters?[SPTAppRemoteErrorDescriptionKey] {
