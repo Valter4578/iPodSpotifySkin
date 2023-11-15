@@ -10,7 +10,6 @@ import SwiftUI
 import UIKit
 
 class SpotifyService: NSObject, ObservableObject  {
-    
     // MARK: - Variables
     private let spotifyClientID = "6c212878ea394187a8a11c2a1f0c5d5d"
     private let spotifyRedirectURL = URL(string: "spotify-ios-quick-start://spotify-login-callback")!

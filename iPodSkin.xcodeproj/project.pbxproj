@@ -23,7 +23,8 @@
 		88F615B22B04F1BF00D4A751 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 88F615B12B04F1BF00D4A751 /* Moya */; };
 		88F615B42B04F1BF00D4A751 /* ReactiveMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 88F615B32B04F1BF00D4A751 /* ReactiveMoya */; };
 		88F615B62B04F1BF00D4A751 /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 88F615B52B04F1BF00D4A751 /* RxMoya */; };
-		88F615B82B04F27B00D4A751 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F615B72B04F27B00D4A751 /* NetworkService.swift */; };
+		88F615B82B04F27B00D4A751 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F615B72B04F27B00D4A751 /* APIManager.swift */; };
+		88F615BB2B05101C00D4A751 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F615BA2B05101C00D4A751 /* NetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,7 +43,8 @@
 		88F6158B2B03C68500D4A751 /* ControlView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlView.swift; sourceTree = "<group>"; };
 		88F6158C2B03C68500D4A751 /* ActionButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionButtonView.swift; sourceTree = "<group>"; };
 		88F615AC2B04EE8C00D4A751 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
-		88F615B72B04F27B00D4A751 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		88F615B72B04F27B00D4A751 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		88F615BA2B05101C00D4A751 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,7 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				88A1E1452AF8A93A00E93557 /* SpotifyService.swift */,
-				88F615B72B04F27B00D4A751 /* NetworkService.swift */,
+				88F615B92B05101300D4A751 /* NetworkService */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -153,6 +155,15 @@
 				88F615AC2B04EE8C00D4A751 /* Album.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		88F615B92B05101300D4A751 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				88F615B72B04F27B00D4A751 /* APIManager.swift */,
+				88F615BA2B05101C00D4A751 /* NetworkService.swift */,
+			);
+			path = NetworkService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,7 +245,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88F615B82B04F27B00D4A751 /* NetworkService.swift in Sources */,
+				88F615BB2B05101C00D4A751 /* NetworkService.swift in Sources */,
+				88F615B82B04F27B00D4A751 /* APIManager.swift in Sources */,
 				88A1E1462AF8A93A00E93557 /* SpotifyService.swift in Sources */,
 				88A1E1432AF79E9100E93557 /* AppDelegate.swift in Sources */,
 				88A1E12C2AF7721B00E93557 /* ContentView.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  NetworkService.swift
+//  APIManager.swift
 //  iPodSkin
 //
 //  Created by Максим Алексеев  on 15.11.2023.
@@ -18,12 +18,11 @@ struct AuthPlugin: PluginType {
     }
 }
 
-
-enum NetworkService {
+enum APIManager {
     case userAlbums(limit: Int)
 }
 
-extension NetworkService: TargetType {
+extension APIManager: TargetType {
     var baseURL: URL {
         guard let url = URL(string: "https://api.spotify.com/v1") else { fatalError() }
         return url
