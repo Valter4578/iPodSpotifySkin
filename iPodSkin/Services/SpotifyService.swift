@@ -94,6 +94,35 @@ class SpotifyService: NSObject, ObservableObject  {
             print(error_description)
         }
     }
+    
+    func nextTrack() {
+        appRemote.playerAPI?.skip(toNext: { result, error in
+            if let error = error {
+                print("Error next track: \(error)")
+                return
+            }
+            print("Skipped track: \(result)")
+        })
+    }
+    
+    func lastTrack() {
+        appRemote.playerAPI?.skip(toPrevious: { result, error in
+            if let error = error {
+                print("Error last track: \(error)")
+                return
+            }
+            print("Skipped track: \(result)")
+        })
+    }
+    
+    func pause() {
+        
+    }
+    
+    
+    func play() {
+
+    }
 }
 
 // MARK: - SPTAppRemoteDelegate

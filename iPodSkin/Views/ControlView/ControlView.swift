@@ -8,10 +8,13 @@
 import SwiftUI
 
 struct ControlView: View {
+    var lastButtonPressed: () -> ()
+    var nextButtonPressed: () -> ()
+    
     var body: some View {
         HStack(spacing: 0) {
             Button(action: {
-                print("last buttom pressed")
+                lastButtonPressed()
             }, label: {
                 Image("last")
                     .resizable()
@@ -45,7 +48,7 @@ struct ControlView: View {
             }
             
             Button(action: {
-                print("next buttom pressed")
+                nextButtonPressed() 
             }, label: {
                 Image("next")
                     .resizable()
@@ -60,5 +63,9 @@ struct ControlView: View {
 }
 
 #Preview {
-    ControlView()
+    ControlView(lastButtonPressed: {
+        print("last button pressed")
+    }, nextButtonPressed: {
+        print("next button pressed")
+    })
 }
