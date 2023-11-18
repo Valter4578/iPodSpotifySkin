@@ -33,6 +33,7 @@ class SpotifyService: NSObject, ObservableObject  {
         appRemote.delegate = self
         if let accessToken = self.obtainAccessToken() {
             appRemote.connectionParameters.accessToken = accessToken
+            self.accessToken = accessToken
         }
         return appRemote
     }()

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8820955E2AFE1E1600CD3A46 /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8820955D2AFE1E1600CD3A46 /* HomeScreenView.swift */; };
+		889899332B078B940000CA42 /* AuthPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889899322B078B940000CA42 /* AuthPlugin.swift */; };
 		88A1E12A2AF7721B00E93557 /* iPodSkinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A1E1292AF7721B00E93557 /* iPodSkinApp.swift */; };
 		88A1E12C2AF7721B00E93557 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A1E12B2AF7721B00E93557 /* ContentView.swift */; };
 		88A1E12E2AF7721C00E93557 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88A1E12D2AF7721C00E93557 /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		8820955D2AFE1E1600CD3A46 /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
+		889899322B078B940000CA42 /* AuthPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPlugin.swift; sourceTree = "<group>"; };
 		88A1E1262AF7721B00E93557 /* iPodSkin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPodSkin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88A1E1292AF7721B00E93557 /* iPodSkinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPodSkinApp.swift; sourceTree = "<group>"; };
 		88A1E12B2AF7721B00E93557 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 			children = (
 				88F615B72B04F27B00D4A751 /* APIManager.swift */,
 				88F615BA2B05101C00D4A751 /* NetworkService.swift */,
+				889899322B078B940000CA42 /* AuthPlugin.swift */,
 			);
 			path = NetworkService;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 				8820955E2AFE1E1600CD3A46 /* HomeScreenView.swift in Sources */,
 				88A1E1412AF787E900E93557 /* SceneDelegate.swift in Sources */,
 				88F615AD2B04EE8C00D4A751 /* Album.swift in Sources */,
+				889899332B078B940000CA42 /* AuthPlugin.swift in Sources */,
 				88F6159E2B03C68600D4A751 /* ControlView.swift in Sources */,
 				88F6159F2B03C68600D4A751 /* ActionButtonView.swift in Sources */,
 				88A1E12A2AF7721B00E93557 /* iPodSkinApp.swift in Sources */,

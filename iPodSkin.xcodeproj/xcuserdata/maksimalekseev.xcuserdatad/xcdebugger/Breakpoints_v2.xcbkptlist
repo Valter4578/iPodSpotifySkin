@@ -758,8 +758,8 @@
             filePath = "iPodSkin/ContentView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
             landmarkName = "unknown"
             landmarkType = "0">
          </BreakpointContent>
@@ -774,8 +774,8 @@
             filePath = "iPodSkin/iPodSkinApp.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
             landmarkName = "body"
             landmarkType = "24">
             <Locations>
@@ -822,8 +822,8 @@
             filePath = "iPodSkin/Services/SpotifyService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "132"
-            endingLineNumber = "132"
+            startingLineNumber = "151"
+            endingLineNumber = "151"
             landmarkName = "appRemoteDidEstablishConnection(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -838,8 +838,8 @@
             filePath = "iPodSkin/Services/SpotifyService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
             landmarkName = "connect()"
             landmarkType = "7">
          </BreakpointContent>
@@ -854,8 +854,8 @@
             filePath = "iPodSkin/Services/SpotifyService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "141"
-            endingLineNumber = "141"
+            startingLineNumber = "160"
+            endingLineNumber = "160"
             landmarkName = "appRemote(_:didFailConnectionAttemptWithError:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -870,8 +870,8 @@
             filePath = "iPodSkin/Services/SpotifyService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "145"
-            endingLineNumber = "145"
+            startingLineNumber = "164"
+            endingLineNumber = "164"
             landmarkName = "appRemote(_:didDisconnectWithError:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -886,8 +886,8 @@
             filePath = "iPodSkin/Services/SpotifyService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "149"
-            endingLineNumber = "149"
+            startingLineNumber = "168"
+            endingLineNumber = "168"
             landmarkName = "playerStateDidChange(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -902,8 +902,8 @@
             filePath = "iPodSkin/Services/SpotifyService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
             landmarkName = "handleAccessToken(from:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -918,8 +918,8 @@
             filePath = "iPodSkin/Services/SpotifyService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
             landmarkName = "handleAccessToken(from:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -934,8 +934,8 @@
             filePath = "iPodSkin/Services/SpotifyService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
             landmarkName = "handleAccessToken(from:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -950,8 +950,8 @@
             filePath = "iPodSkin/Services/SpotifyService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "148"
-            endingLineNumber = "148"
+            startingLineNumber = "167"
+            endingLineNumber = "167"
             landmarkName = "playerStateDidChange(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -966,8 +966,8 @@
             filePath = "iPodSkin/Services/SpotifyService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
             landmarkName = "appRemote"
             landmarkType = "24">
          </BreakpointContent>
@@ -982,10 +982,42 @@
             filePath = "iPodSkin/Services/SpotifyService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133"
+            startingLineNumber = "152"
+            endingLineNumber = "152"
             landmarkName = "appRemoteDidEstablishConnection(_:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "AEB1ED61-B547-40B2-BDA6-476CA607FC12 - af1c31816578d9b1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iPodSkin.SpotifyService.appRemoteDidEstablishConnection(__C.SPTAppRemote) -&gt; ()"
+                  moduleName = "iPodSkin"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maksimalekseev/Documents/dev.nosync/ios/iPodSkin/iPodSkin/Services/SpotifyService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "152"
+                  endingLineNumber = "152"
+                  offsetFromSymbolStart = "148">
+               </Location>
+               <Location
+                  uuid = "AEB1ED61-B547-40B2-BDA6-476CA607FC12 - 96298185422c97fb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Any&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in iPodSkin.SpotifyService.appRemoteDidEstablishConnection(__C.SPTAppRemote) -&gt; ()"
+                  moduleName = "iPodSkin"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maksimalekseev/Documents/dev.nosync/ios/iPodSkin/iPodSkin/Services/SpotifyService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "153"
+                  endingLineNumber = "153"
+                  offsetFromSymbolStart = "64">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -998,8 +1030,8 @@
             filePath = "iPodSkin/Services/SpotifyService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "137"
-            endingLineNumber = "137"
+            startingLineNumber = "156"
+            endingLineNumber = "156"
             landmarkName = "appRemoteDidEstablishConnection(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1008,14 +1040,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "74269A49-B2D7-46B7-BC3C-BFB62B321E75"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iPodSkin/Services/SpotifyService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
             landmarkName = "fetchPlayerState()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1024,16 +1056,366 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "3F082C27-6CE9-4089-8BB3-6616F8B82BF0"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iPodSkin/Services/SpotifyService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "connect()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BC8BF57C-1E2F-4F0B-B40B-746B4B34457C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iPodSkin/Services/NetworkService/NetworkService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "request(endpoint:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FE37202B-B70F-45A5-901E-87D326469067"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iPodSkin/Services/NetworkService/NetworkService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "request(endpoint:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "27A7EFD1-3AE8-4DD4-94C0-EBC38B3D984F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iPodSkin/Services/NetworkService/NetworkService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "accessToken"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9DCBB01D-978E-405B-93A9-7FF8B3D4F072"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iPodSkin/Services/NetworkService/NetworkService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "getAlbums(limit:completionHandler:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9DCBB01D-978E-405B-93A9-7FF8B3D4F072 - 2b01294af54e96f7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Moya.Response, Moya.MoyaError&gt;) -&gt; () in iPodSkin.NetworkService.getAlbums(limit: Swift.Int, completionHandler: (Swift.Result&lt;Swift.Array&lt;iPodSkin.Album&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "iPodSkin"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maksimalekseev/Documents/dev.nosync/ios/iPodSkin/iPodSkin/Services/NetworkService/NetworkService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "336">
+               </Location>
+               <Location
+                  uuid = "9DCBB01D-978E-405B-93A9-7FF8B3D4F072 - 2b01294af54e96f7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Moya.Response, Moya.MoyaError&gt;) -&gt; () in iPodSkin.NetworkService.getAlbums(limit: Swift.Int, completionHandler: (Swift.Result&lt;Swift.Array&lt;iPodSkin.Album&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "iPodSkin"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maksimalekseev/Documents/dev.nosync/ios/iPodSkin/iPodSkin/Services/NetworkService/NetworkService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "412">
+               </Location>
+               <Location
+                  uuid = "9DCBB01D-978E-405B-93A9-7FF8B3D4F072 - 3a5ff3c60edf8ca7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Moya.Response, Moya.MoyaError&gt;) -&gt; () in iPodSkin.NetworkService.getAlbums(limit: Swift.Int, completionHandler: (Swift.Result&lt;iPodSkin.AlbumResponse, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "iPodSkin"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maksimalekseev/Documents/dev.nosync/ios/iPodSkin/iPodSkin/Services/NetworkService/NetworkService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "320">
+               </Location>
+               <Location
+                  uuid = "9DCBB01D-978E-405B-93A9-7FF8B3D4F072 - 3a5ff3c60edf8ca7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Moya.Response, Moya.MoyaError&gt;) -&gt; () in iPodSkin.NetworkService.getAlbums(limit: Swift.Int, completionHandler: (Swift.Result&lt;iPodSkin.AlbumResponse, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "iPodSkin"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maksimalekseev/Documents/dev.nosync/ios/iPodSkin/iPodSkin/Services/NetworkService/NetworkService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "364">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A94206ED-B0F4-405D-B0DC-2463E8845AE6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iPodSkin/Services/NetworkService/NetworkService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "getAlbums(limit:completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D11DDA76-735F-4DDC-AA59-E094B739EEE3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iPodSkin/Services/NetworkService/NetworkService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "getAlbums(limit:completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D7ADC3C6-E602-4156-9E64-AA1AC721B728"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iPodSkin/Services/NetworkService/NetworkService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "provider"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "D7ADC3C6-E602-4156-9E64-AA1AC721B728 - a15531f7610a7514"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iPodSkin.NetworkService.provider.getter : Moya.MoyaProvider&lt;iPodSkin.APIManager&gt;"
+                  moduleName = "iPodSkin"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maksimalekseev/Documents/dev.nosync/ios/iPodSkin/iPodSkin/Services/NetworkService/NetworkService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "232">
+               </Location>
+               <Location
+                  uuid = "D7ADC3C6-E602-4156-9E64-AA1AC721B728 - c7da16ae6b41dd17"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; Swift.Optional&lt;Swift.String&gt; in iPodSkin.NetworkService.provider.getter : Moya.MoyaProvider&lt;iPodSkin.APIManager&gt;"
+                  moduleName = "iPodSkin"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maksimalekseev/Documents/dev.nosync/ios/iPodSkin/iPodSkin/Services/NetworkService/NetworkService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BACA80FD-F828-44BB-BD3C-6749AA07B051"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iPodSkin/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "90CB2A16-3BF3-4673-843C-4B0738B9CA05"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iPodSkin/Services/NetworkService/NetworkService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "getAlbums(limit:completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AD98F752-2453-4FCB-8836-7DB46FA9B1B6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iPodSkin/Services/SpotifyService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
+            landmarkName = "obtainAccessToken()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AE5D01AF-17B9-4D01-A7CB-2427461052FC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iPodSkin/Services/SpotifyService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "143"
+            endingLineNumber = "143"
+            landmarkName = "obtainAccessToken()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "21C4C1C0-8BF0-4CC5-A97D-10F4F27AAB8D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iPodSkin/Services/SpotifyService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "136"
+            endingLineNumber = "136"
+            landmarkName = "obtainAccessToken()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "21C4C1C0-8BF0-4CC5-A97D-10F4F27AAB8D - e2b78cf76273f379"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iPodSkin.SpotifyService.obtainAccessToken() -&gt; Swift.Optional&lt;Swift.String&gt;"
+                  moduleName = "iPodSkin"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maksimalekseev/Documents/dev.nosync/ios/iPodSkin/iPodSkin/Services/SpotifyService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "136"
+                  endingLineNumber = "136"
+                  offsetFromSymbolStart = "712">
+               </Location>
+               <Location
+                  uuid = "21C4C1C0-8BF0-4CC5-A97D-10F4F27AAB8D - e2b78cf76273f379"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iPodSkin.SpotifyService.obtainAccessToken() -&gt; Swift.Optional&lt;Swift.String&gt;"
+                  moduleName = "iPodSkin"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maksimalekseev/Documents/dev.nosync/ios/iPodSkin/iPodSkin/Services/SpotifyService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "136"
+                  endingLineNumber = "136"
+                  offsetFromSymbolStart = "1580">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "26BE2076-88BA-4FBC-B33D-DB8A3F709440"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iPodSkin/Services/NetworkService/NetworkService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "getAlbums(limit:completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "116A8238-2CDF-462A-A837-386BF239132F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iPodSkin/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "body"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

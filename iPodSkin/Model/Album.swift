@@ -7,6 +7,26 @@
 
 import Foundation
 
+struct AlbumResponse: Codable {
+    let href: String
+    let items: [AlbumItemResponse]
+    let limit: Int
+    let next: String
+    let offset: Int
+//    let previous: JSONNull?
+    let total: Int
+}
+
+struct AlbumItemResponse: Codable {
+//    let addedAt: Date
+    let album: Album
+
+    enum CodingKeys: String, CodingKey {
+//        case addedAt = "added_at"
+        case album
+    }
+}
+
 struct Album: Codable {
     let albumType: String
     let artists: [Artist]

@@ -13,10 +13,13 @@ struct iPodSkinApp: App {
 //    @UIApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
 
     @StateObject var spotifyService: SpotifyService = SpotifyService()
+    @StateObject var networkService: NetworkService = NetworkService()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environmentObject(spotifyService)
+                .environmentObject(networkService)
                 .onOpenURL { url in
                     spotifyService.handleAccessToken(from: url)
                 }

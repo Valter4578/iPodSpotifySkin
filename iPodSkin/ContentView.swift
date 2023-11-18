@@ -9,12 +9,24 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var spotifyService: SpotifyService
+    @EnvironmentObject var networkService: NetworkService
     var body: some View {
         VStack {
             
             
             Button(action: {
                 spotifyService.connect()
+
+                networkService.accessToken = spotifyService.accessToken
+                
+                networkService.getAlbums(limit: 2) { result in
+                    switch result {
+                    case .success(let albums):
+                        print(albums)
+                    case .failure(let error):
+                        print(error.localizedDescription)
+                    }
+                }
             }, label: {
                 Text("connect to spotify")
             })
@@ -41,4 +53,5 @@ struct ContentView: View {
 #Preview {
     ContentView()
         .environmentObject(SpotifyService())
+        .environmentObject(NetworkService())
 }
