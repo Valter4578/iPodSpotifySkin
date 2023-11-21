@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 import UIKit
 
-class SpotifyService: NSObject, ObservableObject  {
+class SpotifyService: NSObject  {
     // MARK: - Variables
     private let spotifyClientID = "6c212878ea394187a8a11c2a1f0c5d5d"
     private let spotifyRedirectURL = URL(string: "spotify-ios-quick-start://spotify-login-callback")!
@@ -166,16 +166,5 @@ extension SpotifyService: SPTAppRemoteDelegate, SPTAppRemotePlayerStateDelegate 
     
     func playerStateDidChange(_ playerState: SPTAppRemotePlayerState) {
         debugPrint("Track name: %@", playerState.track.name)
-    }
-}
-
-// MARK: - SPTSessionManagerDelegate
-extension SpotifyService: SPTSessionManagerDelegate {
-    func sessionManager(manager: SPTSessionManager, didInitiate session: SPTSession) {
-        print("connected", session)
-    }
-    
-    func sessionManager(manager: SPTSessionManager, didFailWith error: Error) {
-        print("failed with error: ", error.localizedDescription)
     }
 }

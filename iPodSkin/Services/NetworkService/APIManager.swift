@@ -9,7 +9,8 @@ import Foundation
 import Moya
 
 enum APIManager {
-    case userAlbums(limit: Int)
+    case userAlbums(limit: Int, offset: Int)
+    case userPlaylists(limit: Int, offset: Int)
 }
 
 extension APIManager: TargetType {
@@ -22,6 +23,8 @@ extension APIManager: TargetType {
         switch self {
         case .userAlbums:
             return "/me/albums"
+        case .userPlaylists:
+            return "/me/playlists"
         }
     }
     
@@ -29,13 +32,19 @@ extension APIManager: TargetType {
         switch self {
         case .userAlbums :
             return .get
+        case .userPlaylists:
+            return .get
         }
     }
     
     var task: Moya.Task {
         switch self {
-        case let .userAlbums(limit) :
-            return .requestParameters(parameters: ["limit": limit], encoding: URLEncoding.queryString)
+        case let .userAlbums(limit, offset) :
+            return .requestParameters(parameters: ["limit": limit, "offset": offset],
+                                      encoding: URLEncoding.queryString)
+        case let .userPlaylists(limit, offset):
+            return .requestParameters(parameters: ["limit": limit, "offset": offset],
+                                      encoding: URLEncoding.queryString)
         }
     }
     

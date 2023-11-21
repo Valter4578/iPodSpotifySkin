@@ -9,10 +9,11 @@ import Foundation
 import SwiftUI
 import Moya
 
-protocol Networkable: ObservableObject {
+protocol Networkable: AnyObject {
     var accessToken: String? { get set }
     var provider: MoyaProvider<APIManager> { get }
-    func getAlbums(limit: Int, completionHandler: @escaping (Result<AlbumResponse, Error>) -> ())
+    func getAlbums(limit: Int, offset: Int, completionHandler: @escaping (Result<AlbumResponse, Error>) -> ())
+    func getPlaylists(limit: Int, offset: Int, completionHandler: @escaping (Result<Any, Error>) -> ())
 }
 
 class NetworkService: Networkable {
@@ -33,9 +34,9 @@ class NetworkService: Networkable {
     )
     
     // MARK: - Functions
-    func getAlbums(limit: Int, completionHandler: @escaping (Result<AlbumResponse, Error>) -> ()) {
+    func getAlbums(limit: Int, offset: Int = 0, completionHandler: @escaping (Result<AlbumResponse, Error>) -> ()) {
 //        request(endpoint: .userAlbums(limit: limit), completion: completionHandler)
-        provider.request(.userAlbums(limit: limit)) { result in
+        provider.request(.userAlbums(limit: limit, offset: offset)) { result in
             switch result {
             case let .success(response):
                 do {
@@ -49,6 +50,25 @@ class NetworkService: Networkable {
             case let .failure(error):
                 completionHandler(.failure(error))
                 print(error)
+            }
+        }
+    }
+    
+    func getPlaylists(limit: Int, offset: Int, completionHandler: @escaping (Result<Any, Error>) -> ()) {
+        provider.request(.userPlaylists(limit: limit, offset: offset)) { result in
+            switch result {
+            case let .success(response):
+                do {
+                    let filtredResponse = try response.filterSuccessfulStatusAndRedirectCodes()
+//                    let albumResponse = try JSONDecoder().decode(AlbumResponse.self, from: filtredResponse.data)
+//                    completionHandler(.success(albumResponse))
+                } catch let error {
+                    print(error.localizedDescription + (String(data: response.data, encoding: .utf8) ?? ""))
+                    completionHandler(.failure(error))
+                }
+            case let .failure(error):
+                print(error.localizedDescription)
+                completionHandler(.failure(error))
             }
         }
     }

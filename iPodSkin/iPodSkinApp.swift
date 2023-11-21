@@ -10,18 +10,13 @@ import UIKit
 
 @main
 struct iPodSkinApp: App {
-//    @UIApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
-
-    @StateObject var spotifyService: SpotifyService = SpotifyService()
-    @StateObject var networkService: NetworkService = NetworkService()
+    let view: iPodView =  iPodConfigurator.configureIpodView()
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environmentObject(spotifyService)
-                .environmentObject(networkService)
+            view
                 .onOpenURL { url in
-                    spotifyService.handleAccessToken(from: url)
+                    view.viewModel.handleAccessToken(url: url)
                 }
         }
     }
