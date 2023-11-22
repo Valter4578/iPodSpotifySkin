@@ -44,7 +44,8 @@ class NetworkService: Networkable {
                     let albumResponse = try JSONDecoder().decode(AlbumResponse.self, from: filtredResponse.data)
                     completionHandler(.success(albumResponse))
                 } catch let error {
-                    print(error.localizedDescription + (String(data: response.data, encoding: .utf8) ?? "")) 
+                    print(error)
+                    print(String(data: response.data, encoding: .utf8))
                     completionHandler(.failure(error))
                 }
             case let .failure(error):

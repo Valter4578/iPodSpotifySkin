@@ -11,7 +11,7 @@ import Combine
 final class iPodViewModel: ObservableObject {
     // MARK: Dependencies
     private var spotifyService: SpotifyService
-    private var networkService: Networkable
+    var networkService: Networkable
     
     // MARK: - Init
     init(spotifyService: SpotifyService, networkService: Networkable) {

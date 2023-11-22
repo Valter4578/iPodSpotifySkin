@@ -24,7 +24,7 @@ class AlbumsViewModel: ObservableObject {
     
     // MARK: - Functions
     func fetchAlbumList(limit: Int = 50) {
-        networkService.getAlbums(limit: 50, offset: 0) { [weak self] result in
+        networkService.getAlbums(limit: limit, offset: 0) { [weak self] result in
             switch result {
             case let .success(albumResponse):
                 self?.albumResponse = albumResponse
@@ -37,6 +37,6 @@ class AlbumsViewModel: ObservableObject {
     }
     
     func onAppear() {
-        fetchAlbumList(limit: 5)
+        fetchAlbumList(limit: 20)
     }
 }

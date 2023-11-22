@@ -108,7 +108,7 @@ struct TracksItem: Codable {
     let id: String
     let isLocal: Bool
     let name: String
-    let previewURL: String
+    let previewURL: String?
     let trackNumber: Int
     let type: ItemType
     let uri: String

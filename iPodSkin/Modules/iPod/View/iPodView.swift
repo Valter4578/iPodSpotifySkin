@@ -11,30 +11,35 @@ struct iPodView: View {
     @ObservedObject var viewModel: iPodViewModel
     
     var body: some View {
-        VStack {
-            Button(action: {
-                viewModel.connectPressd()
-            }, label: {
-                Text("connect to spotify")
-            })
-            .background(.green)
-            .frame(width: 100, height: 100)
-            
-            Spacer()
-            
-            ControlView(lastButtonPressed: {
-//                spotifyService.lastTrack()
-                viewModel.lastPressed()
-            }, nextButtonPressed: {
-                viewModel.nextPressed()
-            })
-            .frame(width: 230, height: 230, alignment: .center)
+        NavigationView {
+            VStack {
+                Button(action: {
+                    viewModel.connectPressd()
+                }, label: {
+                    Text("connect to spotify")
+                })
+                .background(.green)
+                .frame(width: 100, height: 100)
+                
+                NavigationLink(destination: iPodRouter.destinationForAlbumList(using: viewModel.networkService)) {
+                    Text("Albums")
+                }
+                .padding(.vertical)
+                
+                Spacer()
+                
+                ControlView(lastButtonPressed: {
+                    viewModel.lastPressed()
+                }, nextButtonPressed: {
+                    viewModel.nextPressed()
+                })
+                .frame(width: 230, height: 230, alignment: .center)
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(
+                LinearGradient(colors: [Color(red: 40/255, green: 40/255, blue: 41/255), Color(red: 103/255, green: 100/255, blue: 103/255)], startPoint: .bottom, endPoint: .top)
+            )
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(
-            LinearGradient(colors: [Color(red: 40/255, green: 40/255, blue: 41/255), Color(red: 103/255, green: 100/255, blue: 103/255)], startPoint: .bottom, endPoint: .top)
-
-        )
     }
 }
 
