@@ -13,6 +13,8 @@ final class iPodViewModel: ObservableObject {
     private var spotifyService: SpotifyService
     var networkService: Networkable
     
+    private var cancellables = Set<AnyCancellable>()
+    
     // MARK: - Init
     init(spotifyService: SpotifyService, networkService: Networkable) {
         self.spotifyService = spotifyService
@@ -21,8 +23,11 @@ final class iPodViewModel: ObservableObject {
     
     // MARK: - Functions
     func connectPressd() {
-        spotifyService.connect() 
-        networkService.accessToken = spotifyService.accessToken
+        spotifyService.connect()
+        spotifyService.$accessToken.sink { [weak self] accessToken in
+            self?.networkService.accessToken = accessToken
+        }
+        .store(in: &cancellables)
     }
     
     func lastPressed() {

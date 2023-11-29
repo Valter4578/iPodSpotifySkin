@@ -14,15 +14,13 @@
 		886E9B532B0CB88E00FA3485 /* iPodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886E9B522B0CB88E00FA3485 /* iPodViewModel.swift */; };
 		886E9B562B0CB9F400FA3485 /* iPodConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886E9B552B0CB9F400FA3485 /* iPodConfigurator.swift */; };
 		886E9B592B0CC4F500FA3485 /* iPodRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886E9B582B0CC4F500FA3485 /* iPodRouter.swift */; };
-		886E9B612B0E23CD00FA3485 /* AlbumsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886E9B5F2B0E23CD00FA3485 /* AlbumsView.swift */; };
 		886E9B622B0E23CD00FA3485 /* AlbumsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886E9B602B0E23CD00FA3485 /* AlbumsItem.swift */; };
+		88857F092B135F4F0073B551 /* AlbumsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88857F082B135F4F0073B551 /* AlbumsView.swift */; };
 		889899332B078B940000CA42 /* AuthPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889899322B078B940000CA42 /* AuthPlugin.swift */; };
 		88A1E12A2AF7721B00E93557 /* iPodSkinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A1E1292AF7721B00E93557 /* iPodSkinApp.swift */; };
 		88A1E12E2AF7721C00E93557 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88A1E12D2AF7721C00E93557 /* Assets.xcassets */; };
 		88A1E1312AF7721C00E93557 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88A1E1302AF7721C00E93557 /* Preview Assets.xcassets */; };
 		88A1E1382AF7746500E93557 /* SpotifyiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88A1E1372AF7746500E93557 /* SpotifyiOS.framework */; };
-		88A1E1412AF787E900E93557 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A1E1402AF787E900E93557 /* SceneDelegate.swift */; };
-		88A1E1432AF79E9100E93557 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A1E1422AF79E9100E93557 /* AppDelegate.swift */; };
 		88A1E1462AF8A93A00E93557 /* SpotifyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A1E1452AF8A93A00E93557 /* SpotifyService.swift */; };
 		88F6159E2B03C68600D4A751 /* ControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F6158B2B03C68500D4A751 /* ControlView.swift */; };
 		88F6159F2B03C68600D4A751 /* ActionButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F6158C2B03C68500D4A751 /* ActionButtonView.swift */; };
@@ -44,8 +42,8 @@
 		886E9B522B0CB88E00FA3485 /* iPodViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPodViewModel.swift; sourceTree = "<group>"; };
 		886E9B552B0CB9F400FA3485 /* iPodConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPodConfigurator.swift; sourceTree = "<group>"; };
 		886E9B582B0CC4F500FA3485 /* iPodRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPodRouter.swift; sourceTree = "<group>"; };
-		886E9B5F2B0E23CD00FA3485 /* AlbumsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlbumsView.swift; path = ../../../../../iPodSkinApp/iPodSkinApp/Modules/Albums/AlbumsView.swift; sourceTree = "<group>"; };
 		886E9B602B0E23CD00FA3485 /* AlbumsItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumsItem.swift; sourceTree = "<group>"; };
+		88857F082B135F4F0073B551 /* AlbumsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsView.swift; sourceTree = "<group>"; };
 		889899322B078B940000CA42 /* AuthPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPlugin.swift; sourceTree = "<group>"; };
 		88A1E1262AF7721B00E93557 /* iPodSkin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPodSkin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88A1E1292AF7721B00E93557 /* iPodSkinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPodSkinApp.swift; sourceTree = "<group>"; };
@@ -54,8 +52,6 @@
 		88A1E1372AF7746500E93557 /* SpotifyiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyiOS.framework; sourceTree = "<group>"; };
 		88A1E1392AF7755E00E93557 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		88A1E13A2AF7789A00E93557 /* iPodSkin-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iPodSkin-Bridging-Header.h"; sourceTree = "<group>"; };
-		88A1E1402AF787E900E93557 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		88A1E1422AF79E9100E93557 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88A1E1452AF8A93A00E93557 /* SpotifyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyService.swift; sourceTree = "<group>"; };
 		88F6158B2B03C68500D4A751 /* ControlView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlView.swift; sourceTree = "<group>"; };
 		88F6158C2B03C68500D4A751 /* ActionButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionButtonView.swift; sourceTree = "<group>"; };
@@ -103,7 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				886E9B602B0E23CD00FA3485 /* AlbumsItem.swift */,
-				886E9B5F2B0E23CD00FA3485 /* AlbumsView.swift */,
+				88857F082B135F4F0073B551 /* AlbumsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -196,8 +192,6 @@
 				8820955B2AFE1E0000CD3A46 /* Modules */,
 				88A1E12D2AF7721C00E93557 /* Assets.xcassets */,
 				88A1E12F2AF7721C00E93557 /* Preview Content */,
-				88A1E1402AF787E900E93557 /* SceneDelegate.swift */,
-				88A1E1422AF79E9100E93557 /* AppDelegate.swift */,
 			);
 			path = iPodSkin;
 			sourceTree = "<group>";
@@ -354,19 +348,17 @@
 			files = (
 				886E9B502B0CB84B00FA3485 /* iPodView.swift in Sources */,
 				88F615BB2B05101C00D4A751 /* NetworkService.swift in Sources */,
+				88857F092B135F4F0073B551 /* AlbumsView.swift in Sources */,
 				88F615B82B04F27B00D4A751 /* APIManager.swift in Sources */,
 				886E9B4C2B0CB5F100FA3485 /* AlbumsRouter.swift in Sources */,
 				88A1E1462AF8A93A00E93557 /* SpotifyService.swift in Sources */,
-				88A1E1432AF79E9100E93557 /* AppDelegate.swift in Sources */,
 				886E9B532B0CB88E00FA3485 /* iPodViewModel.swift in Sources */,
 				886E9B592B0CC4F500FA3485 /* iPodRouter.swift in Sources */,
 				88FA5CEA2B08C030006ECE54 /* AlbumsViewModel.swift in Sources */,
 				8820955E2AFE1E1600CD3A46 /* HomeScreenView.swift in Sources */,
-				88A1E1412AF787E900E93557 /* SceneDelegate.swift in Sources */,
 				88F615AD2B04EE8C00D4A751 /* Album.swift in Sources */,
 				886E9B622B0E23CD00FA3485 /* AlbumsItem.swift in Sources */,
 				886E9B492B0CB58500FA3485 /* AlbumsConfigurator.swift in Sources */,
-				886E9B612B0E23CD00FA3485 /* AlbumsView.swift in Sources */,
 				889899332B078B940000CA42 /* AuthPlugin.swift in Sources */,
 				88F6159E2B03C68600D4A751 /* ControlView.swift in Sources */,
 				886E9B562B0CB9F400FA3485 /* iPodConfigurator.swift in Sources */,

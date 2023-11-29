@@ -1,8 +1,8 @@
 //
 //  AlbumsView.swift
-//  iPodSkinApp
+//  iPodSkin
 //
-//  Created by Максим Алексеев  on 22.11.2023.
+//  Created by Максим Алексеев  on 26.11.2023.
 //
 
 import SwiftUI
@@ -10,18 +10,19 @@ import SwiftUI
 struct AlbumsView: View {
     @ObservedObject var viewModel: AlbumsViewModel
     var body: some View {
-        VStack(spacing: 0, content: {
-            ForEach(viewModel.albums, id: \.id) { album in
-                AlbumsItem(imageUrl: album.images[0].url, title: album.name, artistName: album.artists[0].name)
+        VStack {
+            ForEach(Array(zip(viewModel.albums.indices, viewModel.albums)), id: \.0) { index, item in
+                AlbumsItem(imageUrl: item.images[0].url, title: item.name, artistName: item.artists[0].name)
             }
-        })
+        }
         .background(.white)
         .onAppear(perform: {
-            viewModel.onAppear()
+            viewModel.fetchAlbumList(limit: 20)
         })
     }
 }
 
+//
 //#Preview {
 //    AlbumsView()
 //}

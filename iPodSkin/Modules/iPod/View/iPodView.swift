@@ -21,7 +21,7 @@ struct iPodView: View {
                 .background(.green)
                 .frame(width: 100, height: 100)
                 
-                NavigationLink(destination: iPodRouter.destinationForAlbumList(using: viewModel.networkService)) {
+                NavigationLink(destination: AlbumsView(viewModel: AlbumsViewModel(networkService: viewModel.networkService))) {
                     Text("Albums")
                 }
                 .padding(.vertical)

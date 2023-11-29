@@ -13,7 +13,7 @@ class SpotifyService: NSObject  {
     // MARK: - Variables
     private let spotifyClientID = "6c212878ea394187a8a11c2a1f0c5d5d"
     private let spotifyRedirectURL = URL(string: "spotify-ios-quick-start://spotify-login-callback")!
-    var accessToken = ""
+    @Published var accessToken = ""
     private let secterKey = "7448a7dd574f4906b7d44f1308d214b7"
     
     private let stringScopes = [
