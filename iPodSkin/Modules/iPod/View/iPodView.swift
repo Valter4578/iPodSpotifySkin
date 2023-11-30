@@ -25,7 +25,7 @@ struct iPodView: View {
 //                    Text("Albums")
 //                }
                 
-                ScreenViewContainer {
+                ScreenViewContainer(title: "Albums") {
                     iPodRouter.destinationForAlbumList(using: viewModel.networkService)
                 }
                 .padding(.bottom, 61)

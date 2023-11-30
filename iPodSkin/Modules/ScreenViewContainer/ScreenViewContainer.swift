@@ -10,21 +10,27 @@ import SwiftUI
 struct ScreenViewContainer<T: View>: View {
     // simple example that takes in one parameter.
     var daugtherView: T
+    var isHalfView: Bool = false
+    var title: String
 
-    init(@ViewBuilder daugtherView: () -> T) {
+    init(title: String, @ViewBuilder daugtherView: () -> T) {
         self.daugtherView = daugtherView()
+        self.title = title
     }
 
     var body: some View {
-        // You can modify your viewes here.
-        daugtherView
-            .clipShape(
-                RoundedRectangle(cornerRadius: 10)
-            )
-            .overlay(
-                RoundedRectangle(cornerRadius: 10)
-                    .stroke(.black, lineWidth: 4)
-            )
+        VStack(spacing: 0, content: {
+            ScreenContainerTopBarView(title: title)
+            
+            daugtherView
+        })
+        .clipShape(
+            RoundedRectangle(cornerRadius: 10)
+        )
+        .overlay(
+            RoundedRectangle(cornerRadius: 10)
+                .stroke(.black, lineWidth: 4)
+        )
     }
 }
 

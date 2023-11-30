@@ -14,6 +14,7 @@ struct ControlView: View {
     var body: some View {
         HStack(spacing: 0) {
             Button(action: {
+                UIImpactFeedbackGenerator(style: .light).impactOccurred()
                 lastButtonPressed()
             }, label: {
                 Image("last")
@@ -24,6 +25,7 @@ struct ControlView: View {
             
             VStack(spacing: 0) {
                 Button(action: {
+                    UIImpactFeedbackGenerator(style: .light).impactOccurred()
                     print("Menu buttom pressed")
                 }, label: {
                     Text("MENU")
@@ -37,6 +39,7 @@ struct ControlView: View {
                     .frame(width: 82, height: 82, alignment: .center)
                 
                 Button(action: {
+                    UIImpactFeedbackGenerator(style: .light).impactOccurred()
                     print("pause buttom pressed")
                 }, label: {
                     Image("play")
@@ -48,7 +51,8 @@ struct ControlView: View {
             }
             
             Button(action: {
-                nextButtonPressed() 
+                UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                nextButtonPressed()
             }, label: {
                 Image("next")
                     .resizable()
