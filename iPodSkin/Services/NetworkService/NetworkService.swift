@@ -8,23 +8,28 @@
 import Foundation
 import SwiftUI
 import Moya
+import Combine
 
 protocol Networkable: AnyObject {
-    var accessToken: String? { get set }
+//    var accessToken: String? { get set }
+    var accessTokenPublisher: Published<String?>.Publisher { get }
     var provider: MoyaProvider<APIManager> { get }
     func getAlbums(limit: Int, offset: Int, completionHandler: @escaping (Result<AlbumResponse, Error>) -> ())
     func getPlaylists(limit: Int, offset: Int, completionHandler: @escaping (Result<Any, Error>) -> ())
+    
+    func setAccessToken(_ token: String)
 }
 
 class NetworkService: Networkable {
     // MARK: - Properties
-    var accessToken: String? {
+    @Published var accessToken: String? {
         didSet {
             if let accessToken = accessToken {
                 source.token = accessToken
             }
         }
     }
+    var accessTokenPublisher: Published<String?>.Publisher { $accessToken }
     
     let source = TokenSource()
     lazy var provider = MoyaProvider<APIManager>(
@@ -72,6 +77,10 @@ class NetworkService: Networkable {
                 completionHandler(.failure(error))
             }
         }
+    }
+    
+    func setAccessToken(_ token: String) {
+        self.accessToken = token
     }
     
     // MARK: - Private functions

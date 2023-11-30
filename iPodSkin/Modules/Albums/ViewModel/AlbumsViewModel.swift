@@ -16,11 +16,13 @@ class AlbumsViewModel: ObservableObject {
     init(albums: [Album] = [], networkService: Networkable = NetworkService()) {
         self.networkService = networkService
         self.albums = albums
-        
     }
+    
     // MARK: - Properties
     private var albumResponse: AlbumResponse?
     @Published var albums: [Album] = []
+    
+    private var cancellables: Set<AnyCancellable> = []
     
     // MARK: - Functions
     func fetchAlbumList(limit: Int = 50) {
@@ -37,6 +39,11 @@ class AlbumsViewModel: ObservableObject {
     }
     
     func onAppear() {
-        fetchAlbumList(limit: 20)
+        networkService.accessTokenPublisher
+            .sink { [weak self] accesstToken in
+                print(accesstToken)
+                self?.fetchAlbumList(limit: 20)
+            }
+            .store(in: &cancellables)
     }
 }

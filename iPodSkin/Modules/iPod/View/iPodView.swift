@@ -21,12 +21,16 @@ struct iPodView: View {
                 .background(.green)
                 .frame(width: 100, height: 100)
                 
-                NavigationLink(destination: AlbumsView(viewModel: AlbumsViewModel(networkService: viewModel.networkService))) {
-                    Text("Albums")
-                }
-                .padding(.vertical)
+//                NavigationLink(destination: AlbumsView(viewModel: AlbumsViewModel(networkService: viewModel.networkService))) {
+//                    Text("Albums")
+//                }
                 
-                Spacer()
+                ScreenViewContainer {
+                    iPodRouter.destinationForAlbumList(using: viewModel.networkService)
+                }
+                .padding(.bottom, 61)
+                .padding(.horizontal, 30)
+                .padding(.top, 30)
                 
                 ControlView(lastButtonPressed: {
                     viewModel.lastPressed()

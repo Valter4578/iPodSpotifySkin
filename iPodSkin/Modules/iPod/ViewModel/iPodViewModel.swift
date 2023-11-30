@@ -25,7 +25,7 @@ final class iPodViewModel: ObservableObject {
     func connectPressd() {
         spotifyService.connect()
         spotifyService.$accessToken.sink { [weak self] accessToken in
-            self?.networkService.accessToken = accessToken
+            self?.networkService.setAccessToken(accessToken)
         }
         .store(in: &cancellables)
     }
