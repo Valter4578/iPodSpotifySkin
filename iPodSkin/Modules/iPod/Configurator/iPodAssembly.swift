@@ -1,5 +1,5 @@
 //
-//  iPodConfigurator.swift
+//  iPodAssembly.swift
 //  iPodSkin
 //
 //  Created by Максим Алексеев  on 21.11.2023.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class iPodConfigurator {
+final class iPodAssembly {
     static func configureIpodView() -> iPodView {
         let spotifyService = SpotifyService()
         let networkService = NetworkService()

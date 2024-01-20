@@ -10,7 +10,7 @@ import UIKit
 
 @main
 struct iPodSkinApp: App {
-    let view: iPodView =  iPodConfigurator.configureIpodView()
+    let view: iPodView =  iPodAssembly.configureIpodView()
     
     var body: some Scene {
         WindowGroup {

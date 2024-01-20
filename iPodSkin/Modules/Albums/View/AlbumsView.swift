@@ -13,7 +13,11 @@ struct AlbumsView: View {
         ScrollView {
             VStack {
                 ForEach(Array(zip(viewModel.albums.indices, viewModel.albums)), id: \.0) { index, item in
-                    AlbumsItem(imageUrl: item.images[0].url, title: item.name, artistName: item.artists[0].name)
+                    NavigationLink {
+                        AlbumDetailConfigurator.configureAlbumDetailView(with: item)
+                    } label: {
+                        AlbumsItem(imageUrl: item.images[0].url, title: item.name, artistName: item.artists[0].name)
+                    }
                 }
             }
         }

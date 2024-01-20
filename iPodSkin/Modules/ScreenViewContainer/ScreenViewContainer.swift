@@ -22,7 +22,9 @@ struct ScreenViewContainer<T: View>: View {
         VStack(spacing: 0, content: {
             ScreenContainerTopBarView(title: title)
             
-            daugtherView
+            NavigationView {
+                daugtherView                
+            }
         })
         .clipShape(
             RoundedRectangle(cornerRadius: 10)
