@@ -27,7 +27,7 @@ struct AlbumItemResponse: Codable {
     }
 }
 
-struct Album: Codable {
+struct Album: Codable, Identifiable {
     let albumType: String
     let artists: [Artist]
     let externalUrls: ExternalUrls

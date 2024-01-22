@@ -1391,8 +1391,8 @@
             filePath = "iPodSkin/Modules/Albums/View/AlbumsView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
             landmarkName = "unknown"
             landmarkType = "0">
          </BreakpointContent>
@@ -1872,7 +1872,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "32844AC0-A902-46D1-89DB-CCA8E68D21E1"
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iPodSkin/Modules/Albums/ViewModel/AlbumsViewModel.swift"
