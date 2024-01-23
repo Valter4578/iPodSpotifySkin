@@ -1,5 +1,5 @@
 //
-//  AlbumsItem.swift
+//  AlbumsItemView.swift
 //  iPodSkinApp
 //
 //  Created by Максим Алексеев  on 22.11.2023.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AlbumsItem: View {
+struct AlbumsItemView: View {
     var imageUrl: String
     var title: String
     var artistName: String

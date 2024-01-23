@@ -17,7 +17,7 @@ struct AlbumsView: View {
                     NavigationLink {
                         AlbumDetailConfigurator.configureAlbumDetailView(with: item)
                     } label: {
-                        AlbumsItem(imageUrl: item.images[0].url, title: item.name, artistName: item.artists[0].name)
+                        AlbumsItemView(imageUrl: item.images[0].url, title: item.name, artistName: item.artists[0].name)
                     }
                 }
             })

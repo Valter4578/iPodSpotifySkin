@@ -11,18 +11,20 @@ struct CoverFlowContainerView: View {
     @ObservedObject var viewModel: CoverFlowViewModel
     var body: some View {
         VStack {
-            CoverFlowView(itemWidth: 180,
-                          spacing: -20,
-                          rotation: 45,
-                          items: viewModel.albums) { album in
-                AsyncImage(url: URL(string: album.images[0].url)) { image in
-                    image.image?.resizable()
+            GeometryReader { geo in
+                VStack {
+                    CoverFlowView(itemWidth: 170,
+                                  spacing: -20,
+                                  rotation: 45,
+                                  items: viewModel.albums) { album in
+                        AsyncImage(url: URL(string: album.images[0].url)) { image in
+                            image.image?.resizable()
+                        }
+                    }
                 }
-//                RoundedRectangle(cornerRadius: 25)
-//                    .fill(.red)
+                .frame(height: geo.size.height)
             }
         }
-        .frame(height: 180)
         .onAppear(perform: {
             viewModel.onAppear()
         })

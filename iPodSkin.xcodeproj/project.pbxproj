@@ -14,7 +14,7 @@
 		886E9B532B0CB88E00FA3485 /* iPodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886E9B522B0CB88E00FA3485 /* iPodViewModel.swift */; };
 		886E9B562B0CB9F400FA3485 /* iPodAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886E9B552B0CB9F400FA3485 /* iPodAssembly.swift */; };
 		886E9B592B0CC4F500FA3485 /* iPodRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886E9B582B0CC4F500FA3485 /* iPodRouter.swift */; };
-		886E9B622B0E23CD00FA3485 /* AlbumsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886E9B602B0E23CD00FA3485 /* AlbumsItem.swift */; };
+		886E9B622B0E23CD00FA3485 /* AlbumsItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886E9B602B0E23CD00FA3485 /* AlbumsItemView.swift */; };
 		88857F092B135F4F0073B551 /* AlbumsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88857F082B135F4F0073B551 /* AlbumsView.swift */; };
 		889899332B078B940000CA42 /* AuthPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889899322B078B940000CA42 /* AuthPlugin.swift */; };
 		88A1E12A2AF7721B00E93557 /* iPodSkinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A1E1292AF7721B00E93557 /* iPodSkinApp.swift */; };
@@ -52,7 +52,7 @@
 		886E9B522B0CB88E00FA3485 /* iPodViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPodViewModel.swift; sourceTree = "<group>"; };
 		886E9B552B0CB9F400FA3485 /* iPodAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPodAssembly.swift; sourceTree = "<group>"; };
 		886E9B582B0CC4F500FA3485 /* iPodRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPodRouter.swift; sourceTree = "<group>"; };
-		886E9B602B0E23CD00FA3485 /* AlbumsItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumsItem.swift; sourceTree = "<group>"; };
+		886E9B602B0E23CD00FA3485 /* AlbumsItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumsItemView.swift; sourceTree = "<group>"; };
 		88857F082B135F4F0073B551 /* AlbumsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsView.swift; sourceTree = "<group>"; };
 		889899322B078B940000CA42 /* AuthPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPlugin.swift; sourceTree = "<group>"; };
 		88A1E1262AF7721B00E93557 /* iPodSkin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPodSkin.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,7 +121,7 @@
 		8839D08C2B08DFD400684BD5 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				886E9B602B0E23CD00FA3485 /* AlbumsItem.swift */,
+				886E9B602B0E23CD00FA3485 /* AlbumsItemView.swift */,
 				88857F082B135F4F0073B551 /* AlbumsView.swift */,
 			);
 			path = View;
@@ -417,7 +417,7 @@
 				88C664462B18A45B0054ED34 /* ScreenViewContainer.swift in Sources */,
 				88F615AD2B04EE8C00D4A751 /* Album.swift in Sources */,
 				88C1713A2B5C1F4800D009B3 /* TrackItemView.swift in Sources */,
-				886E9B622B0E23CD00FA3485 /* AlbumsItem.swift in Sources */,
+				886E9B622B0E23CD00FA3485 /* AlbumsItemView.swift in Sources */,
 				886E9B492B0CB58500FA3485 /* AlbumsConfigurator.swift in Sources */,
 				889899332B078B940000CA42 /* AuthPlugin.swift in Sources */,
 				88F6159E2B03C68600D4A751 /* ControlView.swift in Sources */,

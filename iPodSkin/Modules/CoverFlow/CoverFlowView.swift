@@ -7,29 +7,44 @@
 
 import SwiftUI
 
-struct CoverFlowView<Content: View, Item: RandomAccessCollection>: View where Item.Element: Identifiable {
+struct CoverFlowView<Content: View>: View {
     // Customizable properties
     var itemWidth: CGFloat
     var spacing: CGFloat = 10
     var rotation: Double
     
-    var items: Item
-    var content: (Item.Element) -> Content
+    var items: [Album]
+    var content: (Album) -> Content
     var body: some View {
-        GeometryReader {
-            let size = $0.size
+        GeometryReader { geo in
+            let size = geo.size
             
             ScrollView(.horizontal) {
                 LazyHStack(spacing: 0, content: {
                     ForEach(items) { item in
-                        content(item)
-                            .frame(width: itemWidth)
-                            .reflection()
-                            .visualEffect { content, geometryProxy in
-                                content
-                                    .rotation3DEffect(.init(degrees: rotation(proxy: geometryProxy)), axis: (x: 0, y: 1, z: 0), anchor: .center)
+                        VStack {
+                            content(item)
+                                .frame(width: itemWidth, height: itemWidth)
+                                .reflection()
+                                .visualEffect { content, geometryProxy in
+                                    content
+                                        .rotation3DEffect(.init(degrees: rotation(proxy: geometryProxy)), axis: (x: 0, y: 1, z: 0), anchor: .center)
+                                }
+                                .padding(.trailing, item.id == items.last?.id ? 0 : spacing)
+                            
+                            VStack(spacing: 0) {
+                                Text(item.name)
+                                    .font(.system(size: 16, weight: .bold))
+                                    .foregroundStyle(.black)
+                                    .multilineTextAlignment(.center)
+                                    .lineLimit(1)
+                                Text(item.artists[0].name)
+                                    .font(.system(size: 14, weight: .regular))
+                                    .foregroundStyle(.black)
                             }
-                            .padding(.trailing, item.id == items.last?.id ? 0 : spacing)
+                            .frame(width: itemWidth - 20)
+                            .padding(.top, 20)
+                        }
                     }
                 })
                 .padding(.horizontal, (size.width - itemWidth) / 2)
