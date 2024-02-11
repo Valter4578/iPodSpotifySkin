@@ -15,6 +15,8 @@ final class iPodViewModel: ObservableObject {
     
     private var cancellables = Set<AnyCancellable>()
     
+    let onMenuPressed = PassthroughSubject<Void, Never>()
+    
     // MARK: - Init
     init(spotifyService: SpotifyService, networkService: Networkable) {
         self.spotifyService = spotifyService
@@ -36,6 +38,10 @@ final class iPodViewModel: ObservableObject {
     
     func nextPressed() {
         spotifyService.nextTrack()
+    }
+    
+    func menuPressed() {
+        onMenuPressed.send()
     }
     
     func handleAccessToken(url: URL) {

@@ -10,6 +10,7 @@ import SwiftUI
 struct ControlView: View {
     var lastButtonPressed: () -> ()
     var nextButtonPressed: () -> ()
+    var menuButtonPressed: () -> ()
     
     var body: some View {
         HStack(spacing: 0) {
@@ -71,5 +72,7 @@ struct ControlView: View {
         print("last button pressed")
     }, nextButtonPressed: {
         print("next button pressed")
-    })
+    }, menuButtonPressed: {
+        print("menu button pressed")
+    }) 
 }

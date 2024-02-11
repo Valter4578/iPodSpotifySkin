@@ -26,7 +26,8 @@ struct iPodView: View {
             
             ScreenViewContainer(title: "Albums") {
 //                iPodRouter.destinationForAlbumList(using: viewModel.networkService)
-                iPodRouter.destinationForCoverFlow(using: viewModel.networkService)
+//                iPodRouter.destinationForCoverFlow(using: viewModel.networkService)
+                iPodRouter.destinationForHomeMenu(using: viewModel.networkService)
             }
             .padding(.bottom, 61)
             .padding(.horizontal, 30)
@@ -36,6 +37,8 @@ struct iPodView: View {
                 viewModel.lastPressed()
             }, nextButtonPressed: {
                 viewModel.nextPressed()
+            }, menuButtonPressed: {
+                viewModel.menuPressed()
             })
             .frame(width: 230, height: 230, alignment: .center)
         }

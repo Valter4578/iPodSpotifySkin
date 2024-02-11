@@ -9,11 +9,7 @@ import Foundation
 import SwiftUI
 
 final class iPodRouter {
-    static func destinationForAlbumList(using networkService: Networkable) -> some View {
-        return AlbumsConfigurator.configureAlbumsView(with: AlbumsViewModel(networkService: networkService))
-    }
-    
-    static func destinationForCoverFlow(using networkService: Networkable) -> some View {
-        return CoverFlowConfigurator.configureCoverFlow(with: CoverFlowViewModel(albums: [], networkService: networkService))
+    static func destinationForHomeMenu(using networkService: Networkable) -> some View {
+        return HomeMenuConfigurator.configureHomeMenu(with: HomeMenuViewModel(networkService: networkService))
     }
 }

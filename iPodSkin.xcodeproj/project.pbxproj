@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8820955E2AFE1E1600CD3A46 /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8820955D2AFE1E1600CD3A46 /* HomeScreenView.swift */; };
 		886E9B492B0CB58500FA3485 /* AlbumsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886E9B482B0CB58500FA3485 /* AlbumsConfigurator.swift */; };
 		886E9B4C2B0CB5F100FA3485 /* AlbumsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886E9B4B2B0CB5F100FA3485 /* AlbumsRouter.swift */; };
 		886E9B502B0CB84B00FA3485 /* iPodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886E9B4F2B0CB84B00FA3485 /* iPodView.swift */; };
@@ -22,6 +21,10 @@
 		88A1E1312AF7721C00E93557 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88A1E1302AF7721C00E93557 /* Preview Assets.xcassets */; };
 		88A1E1382AF7746500E93557 /* SpotifyiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88A1E1372AF7746500E93557 /* SpotifyiOS.framework */; };
 		88A1E1462AF8A93A00E93557 /* SpotifyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A1E1452AF8A93A00E93557 /* SpotifyService.swift */; };
+		88AAF9752B5FE26600501120 /* HomeMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AAF9742B5FE26600501120 /* HomeMenuView.swift */; };
+		88AAF9772B5FE2F300501120 /* HomeMenuRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AAF9762B5FE2F300501120 /* HomeMenuRouter.swift */; };
+		88AAF9792B60F01500501120 /* HomeMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AAF9782B60F01400501120 /* HomeMenuViewModel.swift */; };
+		88AAF97B2B60F10500501120 /* HomeMenuConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AAF97A2B60F10500501120 /* HomeMenuConfigurator.swift */; };
 		88BA54632B18A94100B675D4 /* ScreenContainerTopBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA54622B18A94100B675D4 /* ScreenContainerTopBarView.swift */; };
 		88C171362B5C1E3100D009B3 /* AlbumDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C171352B5C1E3100D009B3 /* AlbumDetailView.swift */; };
 		88C171382B5C1EB000D009B3 /* AlbumDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C171372B5C1EB000D009B3 /* AlbumDetailViewModel.swift */; };
@@ -45,7 +48,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8820955D2AFE1E1600CD3A46 /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
 		886E9B482B0CB58500FA3485 /* AlbumsConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsConfigurator.swift; sourceTree = "<group>"; };
 		886E9B4B2B0CB5F100FA3485 /* AlbumsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsRouter.swift; sourceTree = "<group>"; };
 		886E9B4F2B0CB84B00FA3485 /* iPodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPodView.swift; sourceTree = "<group>"; };
@@ -63,6 +65,10 @@
 		88A1E1392AF7755E00E93557 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		88A1E13A2AF7789A00E93557 /* iPodSkin-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iPodSkin-Bridging-Header.h"; sourceTree = "<group>"; };
 		88A1E1452AF8A93A00E93557 /* SpotifyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyService.swift; sourceTree = "<group>"; };
+		88AAF9742B5FE26600501120 /* HomeMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMenuView.swift; sourceTree = "<group>"; };
+		88AAF9762B5FE2F300501120 /* HomeMenuRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMenuRouter.swift; sourceTree = "<group>"; };
+		88AAF9782B60F01400501120 /* HomeMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMenuViewModel.swift; sourceTree = "<group>"; };
+		88AAF97A2B60F10500501120 /* HomeMenuConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMenuConfigurator.swift; sourceTree = "<group>"; };
 		88BA54622B18A94100B675D4 /* ScreenContainerTopBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenContainerTopBarView.swift; sourceTree = "<group>"; };
 		88C171352B5C1E3100D009B3 /* AlbumDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailView.swift; sourceTree = "<group>"; };
 		88C171372B5C1EB000D009B3 /* AlbumDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailViewModel.swift; sourceTree = "<group>"; };
@@ -100,22 +106,14 @@
 		8820955B2AFE1E0000CD3A46 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				88AAF9712B5FE22000501120 /* HomeMenu */,
 				88F1A9E02B5E442500B7E577 /* CoverFlow */,
 				88C171342B5C1E2600D009B3 /* AlbumDetail */,
 				88C664442B18A4480054ED34 /* ScreenViewContainer */,
 				886E9B4D2B0CB65B00FA3485 /* iPod */,
 				88FA5CE72B08BD44006ECE54 /* Albums */,
-				8820955C2AFE1E0B00CD3A46 /* HomeScreen */,
 			);
 			path = Modules;
-			sourceTree = "<group>";
-		};
-		8820955C2AFE1E0B00CD3A46 /* HomeScreen */ = {
-			isa = PBXGroup;
-			children = (
-				8820955D2AFE1E1600CD3A46 /* HomeScreenView.swift */,
-			);
-			path = HomeScreen;
 			sourceTree = "<group>";
 		};
 		8839D08C2B08DFD400684BD5 /* View */ = {
@@ -234,6 +232,17 @@
 				88F615B92B05101300D4A751 /* NetworkService */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		88AAF9712B5FE22000501120 /* HomeMenu */ = {
+			isa = PBXGroup;
+			children = (
+				88AAF9742B5FE26600501120 /* HomeMenuView.swift */,
+				88AAF9762B5FE2F300501120 /* HomeMenuRouter.swift */,
+				88AAF9782B60F01400501120 /* HomeMenuViewModel.swift */,
+				88AAF97A2B60F10500501120 /* HomeMenuConfigurator.swift */,
+			);
+			path = HomeMenu;
 			sourceTree = "<group>";
 		};
 		88C171342B5C1E2600D009B3 /* AlbumDetail */ = {
@@ -400,23 +409,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88AAF9772B5FE2F300501120 /* HomeMenuRouter.swift in Sources */,
 				88F1A9E22B5E443600B7E577 /* CoverFlowView.swift in Sources */,
 				886E9B502B0CB84B00FA3485 /* iPodView.swift in Sources */,
+				88AAF9752B5FE26600501120 /* HomeMenuView.swift in Sources */,
 				88F615BB2B05101C00D4A751 /* NetworkService.swift in Sources */,
 				88857F092B135F4F0073B551 /* AlbumsView.swift in Sources */,
 				88F615B82B04F27B00D4A751 /* APIManager.swift in Sources */,
 				886E9B4C2B0CB5F100FA3485 /* AlbumsRouter.swift in Sources */,
 				88A1E1462AF8A93A00E93557 /* SpotifyService.swift in Sources */,
+				88AAF97B2B60F10500501120 /* HomeMenuConfigurator.swift in Sources */,
 				886E9B532B0CB88E00FA3485 /* iPodViewModel.swift in Sources */,
 				88F1A9E62B5E44B500B7E577 /* CoverFlowViewModel.swift in Sources */,
 				886E9B592B0CC4F500FA3485 /* iPodRouter.swift in Sources */,
 				88FA5CEA2B08C030006ECE54 /* AlbumsViewModel.swift in Sources */,
 				88C171382B5C1EB000D009B3 /* AlbumDetailViewModel.swift in Sources */,
 				88F1A9E82B5E486C00B7E577 /* CoverFlowConfigurator.swift in Sources */,
-				8820955E2AFE1E1600CD3A46 /* HomeScreenView.swift in Sources */,
 				88C664462B18A45B0054ED34 /* ScreenViewContainer.swift in Sources */,
 				88F615AD2B04EE8C00D4A751 /* Album.swift in Sources */,
 				88C1713A2B5C1F4800D009B3 /* TrackItemView.swift in Sources */,
+				88AAF9792B60F01500501120 /* HomeMenuViewModel.swift in Sources */,
 				886E9B622B0E23CD00FA3485 /* AlbumsItemView.swift in Sources */,
 				886E9B492B0CB58500FA3485 /* AlbumsConfigurator.swift in Sources */,
 				889899332B078B940000CA42 /* AuthPlugin.swift in Sources */,
