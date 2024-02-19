@@ -21,16 +21,17 @@ class CoverFlowViewModel: ObservableObject {
     
     // MARK: - Functions
     func fetchAlbumList(limit: Int = 50) {
-        networkService.getAlbums(limit: limit, offset: 0) { [weak self] result in
-            switch result {
-            case let .success(albumResponse):
-//                self?.albumResponse = albumResponse
-                let fetchedAlbums = albumResponse.items.map { $0.album }
+        networkService.getAlbums(limit: limit, offset: 0)
+            .receive(on: DispatchQueue.main)
+            .sink { completion in
+                if case .failure(let error) = completion {
+                    print(error.localizedDescription)
+                }
+            } receiveValue: { [weak self] response in
+                let fetchedAlbums = response.items.map { $0.album }
                 self?.albums.append(contentsOf: fetchedAlbums)
-            case let .failure(error):
-                print(error.localizedDescription)
             }
-        }
+            .store(in: &cancellables)
     }
     
     func onAppear() {

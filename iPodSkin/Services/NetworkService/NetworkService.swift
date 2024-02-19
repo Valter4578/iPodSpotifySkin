@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import CombineMoya
 import Moya
 import Combine
 
@@ -14,7 +15,7 @@ protocol Networkable: AnyObject {
 //    var accessToken: String? { get set }
     var accessTokenPublisher: Published<String?>.Publisher { get }
     var provider: MoyaProvider<APIManager> { get }
-    func getAlbums(limit: Int, offset: Int, completionHandler: @escaping (Result<AlbumResponse, Error>) -> ())
+    func getAlbums(limit: Int, offset: Int) -> AnyPublisher<AlbumResponse, Error>  
     func getPlaylists(limit: Int, offset: Int, completionHandler: @escaping (Result<Any, Error>) -> ())
     
     func setAccessToken(_ token: String)
@@ -22,6 +23,8 @@ protocol Networkable: AnyObject {
 
 class NetworkService: Networkable {
     // MARK: - Properties
+    private var cancellables = Set<AnyCancellable>()
+    
     @Published var accessToken: String? {
         didSet {
             if let accessToken = accessToken {
@@ -39,26 +42,27 @@ class NetworkService: Networkable {
     )
     
     // MARK: - Functions
-    func getAlbums(limit: Int, offset: Int = 0, completionHandler: @escaping (Result<AlbumResponse, Error>) -> ()) {
-//        request(endpoint: .userAlbums(limit: limit), completion: completionHandler)
-        provider.request(.userAlbums(limit: limit, offset: offset)) { result in
-            switch result {
-            case let .success(response):
-                do {
-                    let filtredResponse = try response.filterSuccessfulStatusAndRedirectCodes()
-                    let albumResponse = try JSONDecoder().decode(AlbumResponse.self, from: filtredResponse.data)
-                    completionHandler(.success(albumResponse))
-                } catch let error {
-                    print(error)
-                    print(String(data: response.data, encoding: .utf8))
-                    completionHandler(.failure(error))
-                }
-            case let .failure(error):
-                completionHandler(.failure(error))
-                print(error)
-            }
-        }
+    func getAlbums(limit: Int, offset: Int = 0) -> AnyPublisher<AlbumResponse, Error> {
+        Future<AlbumResponse, Error> { promise in
+            self.provider.requestPublisher(.userAlbums(limit: limit, offset: offset), callbackQueue: .global())
+                .sink(receiveCompletion: { completion in
+                    if case .failure(let error) = completion {
+                        promise(.failure(error))
+                    }
+                }, receiveValue: { response in
+                    do {
+                        let filtredResponse = try response.filterSuccessfulStatusAndRedirectCodes()
+                        let albumResponse = try JSONDecoder().decode(AlbumResponse.self, from: filtredResponse.data)
+                        promise(.success(albumResponse))
+                    } catch {
+                        promise(.failure(error))
+                    }
+                })
+                .store(in: &self.cancellables)
+        }.eraseToAnyPublisher()
     }
+    
+    
     
     func getPlaylists(limit: Int, offset: Int, completionHandler: @escaping (Result<Any, Error>) -> ()) {
         provider.request(.userPlaylists(limit: limit, offset: offset)) { result in
@@ -84,19 +88,19 @@ class NetworkService: Networkable {
     }
     
     // MARK: - Private functions
-    private func request<T: Decodable>(endpoint: APIManager, completion: @escaping (Result<T, Error>) -> ()) {
-        provider.request(endpoint) { result in
-            switch result {
-            case let .success(response):
-                do {
-                    let results = try JSONDecoder().decode(T.self, from: response.data)
-                    completion(.success(results))
-                } catch let error {
-                    completion(.failure(error))
-                }
-            case let .failure(error):
-                completion(.failure(error))
-            }
-        }
-    }
+//    private func request<T: Decodable>(endpoint: APIManager, completion: @escaping (Result<T, Error>) -> ()) {
+//        provider.request(endpoint) { result in
+//            switch result {
+//            case let .success(response):
+//                do {
+//                    let results = try JSONDecoder().decode(T.self, from: response.data)
+//                    completion(.success(results))
+//                } catch let error {
+//                    completion(.failure(error))
+//                }
+//            case let .failure(error):
+//                completion(.failure(error))
+//            }
+//        }
+//    }
 }
