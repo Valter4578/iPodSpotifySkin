@@ -12,6 +12,8 @@ import Moya
 enum APIManager {
     case userAlbums(limit: Int, offset: Int)
     case userPlaylists(limit: Int, offset: Int)
+    
+    case currentPlaying
 }
 
 extension APIManager: TargetType {
@@ -26,16 +28,21 @@ extension APIManager: TargetType {
             return "/me/albums"
         case .userPlaylists:
             return "/me/playlists"
+        case .currentPlaying:
+            return "/me/player"
         }
     }
     
     var method: Moya.Method {
-        switch self {
-        case .userAlbums :
-            return .get
-        case .userPlaylists:
-            return .get
-        }
+//        switch self {
+//        case .userAlbums :
+//            return .get
+//        case .userPlaylists:
+//            return .get
+//        case .currentPlaying:
+//                .gete
+//        }
+        return .get
     }
     
     var task: Moya.Task {
@@ -46,6 +53,8 @@ extension APIManager: TargetType {
         case let .userPlaylists(limit, offset):
             return .requestParameters(parameters: ["limit": limit, "offset": offset],
                                       encoding: URLEncoding.queryString)
+        case .currentPlaying:
+            return .requestPlain
         }
     }
     

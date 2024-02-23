@@ -10,7 +10,7 @@ import Combine
 
 final class iPodViewModel: ObservableObject {
     // MARK: Dependencies
-    private var spotifyService: SpotifyService
+    var spotifyService: SpotifyService
     var networkService: Networkable
     
     private var cancellables = Set<AnyCancellable>()

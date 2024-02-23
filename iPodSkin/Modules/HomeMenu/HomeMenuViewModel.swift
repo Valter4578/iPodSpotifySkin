@@ -10,8 +10,11 @@ import SwiftUI
 
 class HomeMenuViewModel: ObservableObject {
     var networkService: Networkable
+    var spotifyService: SpotifyService
     
-    init(networkService: Networkable) {
+    
+    init(networkService: Networkable, spotifyService: SpotifyService) {
         self.networkService = networkService
+        self.spotifyService = spotifyService
     }
 }

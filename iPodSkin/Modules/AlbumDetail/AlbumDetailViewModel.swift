@@ -16,6 +16,6 @@ class AlbumDetailViewModel: ObservableObject {
     }
 
     func getTracklist() -> [TracksItem] {
-        return album.tracks.items
+        return album.tracks?.items ?? []
     }
 }

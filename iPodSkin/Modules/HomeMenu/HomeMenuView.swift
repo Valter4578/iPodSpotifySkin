@@ -30,6 +30,15 @@ struct HomeMenuView: View {
                             .font(.system(size: 16, weight: .bold))
                             .foregroundStyle(.black)
                     }
+                    
+                    NavigationLink {
+                        HomeMenuRouter.destinationForCurrentPlaying(using: viewModel.networkService, spotifyService: viewModel.spotifyService)
+                    } label: {
+                        Text("Current Playing")
+                            .font(.system(size: 16, weight: .bold))
+                            .foregroundStyle(.black)
+                    }
+
                 }
                 .background(.white)
                 

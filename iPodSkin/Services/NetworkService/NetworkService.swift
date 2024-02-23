@@ -15,7 +15,9 @@ protocol Networkable: AnyObject {
 //    var accessToken: String? { get set }
     var accessTokenPublisher: Published<String?>.Publisher { get }
     var provider: MoyaProvider<APIManager> { get }
-    func getAlbums(limit: Int, offset: Int) -> AnyPublisher<AlbumResponse, Error>  
+    
+    func getAlbums(limit: Int, offset: Int) -> AnyPublisher<AlbumResponse, Error>
+    func getCurrentPlaying() -> AnyPublisher<CurrentPlayingResponse, Error>
     func getPlaylists(limit: Int, offset: Int, completionHandler: @escaping (Result<Any, Error>) -> ())
     
     func setAccessToken(_ token: String)
@@ -62,7 +64,27 @@ class NetworkService: Networkable {
         }.eraseToAnyPublisher()
     }
     
-    
+    func getCurrentPlaying() -> AnyPublisher<CurrentPlayingResponse, Error> {
+        Future<CurrentPlayingResponse, Error> { promise in
+            self.provider.requestPublisher(.currentPlaying, callbackQueue: .global())
+                .print("NetworkService: ")
+                .sink(receiveCompletion: { completion in
+                    if case .failure(let error) = completion {
+                        promise(.failure(error))
+                    }
+                }, receiveValue: { response in
+                    do {
+                        let filtredResponse = try response.filterSuccessfulStatusAndRedirectCodes()
+                        let currentPlayingResponse = try JSONDecoder().decode(CurrentPlayingResponse.self, from: filtredResponse.data)
+                        promise(.success(currentPlayingResponse))
+                    } catch {
+                        promise(.failure(error))
+                    }
+                })
+                .store(in: &self.cancellables)
+        }
+        .eraseToAnyPublisher()
+    }
     
     func getPlaylists(limit: Int, offset: Int, completionHandler: @escaping (Result<Any, Error>) -> ()) {
         provider.request(.userPlaylists(limit: limit, offset: offset)) { result in

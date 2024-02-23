@@ -27,7 +27,7 @@ struct iPodView: View {
             ScreenViewContainer(title: "Albums") {
 //                iPodRouter.destinationForAlbumList(using: viewModel.networkService)
 //                iPodRouter.destinationForCoverFlow(using: viewModel.networkService)
-                iPodRouter.destinationForHomeMenu(using: viewModel.networkService)
+                iPodRouter.destinationForHomeMenu(using: viewModel.networkService, spotifyService: viewModel.spotifyService)
             }
             .padding(.bottom, 61)
             .padding(.horizontal, 30)

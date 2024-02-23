@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 import UIKit
 
-class SpotifyService: NSObject  {
+class SpotifyService: NSObject, ObservableObject {
     // MARK: - Variables
     private let spotifyClientID = "6c212878ea394187a8a11c2a1f0c5d5d"
     private let spotifyRedirectURL = URL(string: "spotify-ios-quick-start://spotify-login-callback")!
@@ -43,7 +43,7 @@ class SpotifyService: NSObject  {
         redirectURL: spotifyRedirectURL
     )
     
-    private var lastPlayerState: SPTAppRemotePlayerState?
+    @Published var lastPlayerState: SPTAppRemotePlayerState?
     
     // MARK: - Functions
     func connect() {
@@ -78,6 +78,7 @@ class SpotifyService: NSObject  {
             } else if let playerState = playerState as? SPTAppRemotePlayerState {
                 print(playerState)
                 self?.lastPlayerState = playerState
+//                self?.lastPlayerState.publisher
             }
         })
     }
@@ -166,5 +167,6 @@ extension SpotifyService: SPTAppRemoteDelegate, SPTAppRemotePlayerStateDelegate 
     
     func playerStateDidChange(_ playerState: SPTAppRemotePlayerState) {
         debugPrint("Track name: %@", playerState.track.name)
+        self.lastPlayerState = playerState
     }
 }

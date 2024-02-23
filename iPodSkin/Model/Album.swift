@@ -34,11 +34,11 @@ struct Album: Codable, Identifiable {
     let href: String
     let id: String
     let images: [SpotifyImage]
-    let label: String
+    let label: String?
     let name: String
     let releaseDate, releaseDatePrecision: String
     let totalTracks: Int
-    let tracks: Tracks
+    let tracks: Tracks?
     let type, uri: String
 
     enum CodingKeys: String, CodingKey {

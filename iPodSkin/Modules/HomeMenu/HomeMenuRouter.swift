@@ -17,4 +17,8 @@ class HomeMenuRouter {
         return CoverFlowConfigurator.configureCoverFlow(with: CoverFlowViewModel(albums: [], networkService: networkService))
     }
     
+    static func destinationForCurrentPlaying(using networkService: Networkable, spotifyService: SpotifyService) -> some View  {
+        return CurrentPlayingConfigurator.configureCurrentPlayingView(with: CurrentPlayingViewModel(networkService: networkService, spotifyService: spotifyService))
+    }
+    
 }
