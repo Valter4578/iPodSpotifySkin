@@ -52,7 +52,8 @@ class SpotifyService: NSObject, ObservableObject {
             return
         }
         
-        appRemote.connect()
+        self.appRemote.connect()
+        
     }
     
     func disconnect() {

@@ -20,9 +20,6 @@ struct iPodView: View {
             .background(.green)
             .frame(width: 100, height: 100)
             
-            //                NavigationLink(destination: AlbumsView(viewModel: AlbumsViewModel(networkService: viewModel.networkService))) {
-            //                    Text("Albums")
-            //                }
             
             ScreenViewContainer(title: "Albums") {
 //                iPodRouter.destinationForAlbumList(using: viewModel.networkService)

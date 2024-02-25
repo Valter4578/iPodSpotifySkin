@@ -14,32 +14,20 @@ struct CurrentPlayingModel {
 }
 
 class CurrentPlayingViewModel: ObservableObject {
+    // MARK: - Dependencies
+    private var spotifyService: SpotifyService
+    private var networkService: Networkable
+    
     // MARK: - Properties
     private var cancellables = Set<AnyCancellable>()
     
     @Published var currentPlayingResponse: CurrentPlayingResponse?
-    //    var album: Album?
-    //    var trackNumber: Int = 0
     
-    private var spotifyService: SpotifyService
-    private var networkService: Networkable
-    
+    @Published var currentPlayingSeconds: Int = 0
+    @Published var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    @Published var progress: CGFloat = 0.0
+        
     // MARK: - Inits
-    //    init(album: Album, trackNumber: Int = 0, spotifyService: SpotifyService) {
-    //    init(spotifyService: SpotifyService) {
-    //        self.album = album
-    //        self.trackNumber = trackNumber
-    //        self.spotifyService = spotifyService
-    //        spotifyService.$lastPlayerState
-    //            .print()
-    //            .sink { state in
-    ////                self.album = state.track.album
-    ////                self.trackNumber = state.track.name
-    //
-    //            }
-    //            .store(in: &cancellables)
-    //    }
-    
     init(networkService: Networkable, spotifyService: SpotifyService) {
         self.networkService = networkService
         self.spotifyService = spotifyService
@@ -47,19 +35,14 @@ class CurrentPlayingViewModel: ObservableObject {
     
     // MARK: - Functions
     func getImageUrl() -> URL? {
-        //        return URL(string: album.images[0].url)
-        //        return URL(string: "")
         return URL(string: currentPlayingResponse?.item.album.images[0].url ?? "")
     }
     
     func getTrackName() -> String {
-        //        return album.tracks.items[trackNumber].name
-        //        return "123"
         return currentPlayingResponse?.item.name ?? ""
     }
     
     func getAlbumName() -> String {
-        //        return album.name
         return currentPlayingResponse?.item.album.name ?? ""
     }
     
@@ -67,18 +50,41 @@ class CurrentPlayingViewModel: ObservableObject {
         return currentPlayingResponse?.item.artists.map { $0.name }.joined(separator: " ") ?? ""
     }
     
-    private func getCurrentPlaying() {
+    func getTrackTotalLength() -> String {
+        guard let response = currentPlayingResponse else { return "--:--" }
+        
+        var seconds = response.item.durationMS / 1000
+        let minutes = seconds / 60
+        seconds = seconds - (minutes * 60)
+        return String("\(minutes):\(seconds < 10 ? "0" : "")\(seconds)")
+    }
+    
+    func getFormattedPlayingTime() -> String {
+        let minutes = currentPlayingSeconds / 60
+        let seconds = currentPlayingSeconds - (minutes * 60)
+        return String("\(minutes):\(seconds < 10 ? "0" : "")\(seconds)")
+    }
+    
+    func getCurrentPlaying() {
         self.networkService.getCurrentPlaying()
             .print("ViewModel: ")
             .receive(on: DispatchQueue.main)
             .sink { error in
                 print(error)
             } receiveValue: { [weak self] response in
+                self?.currentPlayingSeconds = response.progressMS / 1000
+                self?.timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+                
                 self?.currentPlayingResponse = response
             }
             .store(in: &cancellables)
     }
     
+    func updateProgress() {
+        currentPlayingSeconds += 1
+        progress = CGFloat(currentPlayingSeconds) / CGFloat(((currentPlayingResponse?.item.durationMS ?? 0) / 1000))
+    }
+
     func onAppear() {
         spotifyService.fetchPlayerState()
         spotifyService.$lastPlayerState

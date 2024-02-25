@@ -26,10 +26,13 @@ final class iPodViewModel: ObservableObject {
     // MARK: - Functions
     func connectPressd() {
         spotifyService.connect()
-        spotifyService.$accessToken.sink { [weak self] accessToken in
-            self?.networkService.setAccessToken(accessToken)
-        }
-        .store(in: &cancellables)
+        
+        spotifyService.$accessToken
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] accessToken in
+                self?.networkService.setAccessToken(accessToken)
+            }
+            .store(in: &cancellables)
     }
     
     func lastPressed() {

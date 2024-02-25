@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		88009FE42B88FBCF00AF96FB /* CurrentPlaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88009FE32B88FBCF00AF96FB /* CurrentPlaying.swift */; };
+		88009FEB2B89F9BE00AF96FB /* CurrentPlayingProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88009FEA2B89F9BE00AF96FB /* CurrentPlayingProgressBarView.swift */; };
 		886E9B492B0CB58500FA3485 /* AlbumsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886E9B482B0CB58500FA3485 /* AlbumsConfigurator.swift */; };
 		886E9B4C2B0CB5F100FA3485 /* AlbumsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886E9B4B2B0CB5F100FA3485 /* AlbumsRouter.swift */; };
 		886E9B502B0CB84B00FA3485 /* iPodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886E9B4F2B0CB84B00FA3485 /* iPodView.swift */; };
@@ -53,6 +54,7 @@
 
 /* Begin PBXFileReference section */
 		88009FE32B88FBCF00AF96FB /* CurrentPlaying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentPlaying.swift; sourceTree = "<group>"; };
+		88009FEA2B89F9BE00AF96FB /* CurrentPlayingProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentPlayingProgressBarView.swift; sourceTree = "<group>"; };
 		886E9B482B0CB58500FA3485 /* AlbumsConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsConfigurator.swift; sourceTree = "<group>"; };
 		886E9B4B2B0CB5F100FA3485 /* AlbumsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsRouter.swift; sourceTree = "<group>"; };
 		886E9B4F2B0CB84B00FA3485 /* iPodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPodView.swift; sourceTree = "<group>"; };
@@ -111,6 +113,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		88009FE92B89F9B000AF96FB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				88DBE8D92B79074B00362AEE /* CurrentPlayingView.swift */,
+				88009FEA2B89F9BE00AF96FB /* CurrentPlayingProgressBarView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		8820955B2AFE1E0000CD3A46 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
@@ -277,7 +288,7 @@
 		88DBE8D82B79073B00362AEE /* CurrentPlaying */ = {
 			isa = PBXGroup;
 			children = (
-				88DBE8D92B79074B00362AEE /* CurrentPlayingView.swift */,
+				88009FE92B89F9B000AF96FB /* View */,
 				88DBE8DE2B79115A00362AEE /* CurrentPlayingViewModel.swift */,
 				88DBE8E02B79177F00362AEE /* CurrentPlayingConfigurator.swift */,
 			);
@@ -459,6 +470,7 @@
 				88F6159E2B03C68600D4A751 /* ControlView.swift in Sources */,
 				88BA54632B18A94100B675D4 /* ScreenContainerTopBarView.swift in Sources */,
 				88F1A9E42B5E449A00B7E577 /* CoverFlowContainerView.swift in Sources */,
+				88009FEB2B89F9BE00AF96FB /* CurrentPlayingProgressBarView.swift in Sources */,
 				886E9B562B0CB9F400FA3485 /* iPodAssembly.swift in Sources */,
 				88F6159F2B03C68600D4A751 /* ActionButtonView.swift in Sources */,
 				88C171362B5C1E3100D009B3 /* AlbumDetailView.swift in Sources */,
