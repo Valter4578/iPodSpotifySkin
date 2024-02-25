@@ -9,10 +9,6 @@ import Foundation
 import SwiftUI
 import Combine
 
-struct CurrentPlayingModel {
-    
-}
-
 class CurrentPlayingViewModel: ObservableObject {
     // MARK: - Dependencies
     private var spotifyService: SpotifyService
@@ -72,8 +68,12 @@ class CurrentPlayingViewModel: ObservableObject {
             .sink { error in
                 print(error)
             } receiveValue: { [weak self] response in
-                self?.currentPlayingSeconds = response.progressMS / 1000
-                self?.timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+                if response.isPlaying {
+                    self?.currentPlayingSeconds = response.progressMS / 1000
+                    self?.timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+                } else {
+                    self?.timer.upstream.connect().cancel()
+                }
                 
                 self?.currentPlayingResponse = response
             }

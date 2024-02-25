@@ -47,6 +47,10 @@ final class iPodViewModel: ObservableObject {
         onMenuPressed.send()
     }
     
+    func playPausePressed() {
+        spotifyService.playPause()
+    }
+    
     func handleAccessToken(url: URL) {
         spotifyService.handleAccessToken(from: url)
     }

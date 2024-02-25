@@ -53,7 +53,6 @@ class SpotifyService: NSObject, ObservableObject {
         }
         
         self.appRemote.connect()
-        
     }
     
     func disconnect() {
@@ -118,13 +117,17 @@ class SpotifyService: NSObject, ObservableObject {
         })
     }
     
-    func pause() {
-        
-    }
+//    func pause() {
+//        appRemote.playerAPI?.pause()
+//    }
+//    
+//    func play() {
+//        appRemote.playerAPI?.resume()
+//    }
     
-    
-    func play() {
-        
+    func playPause() {
+        guard let isPaused = lastPlayerState?.isPaused else { return }
+        isPaused ? appRemote.playerAPI?.resume() : appRemote.playerAPI?.pause()
     }
     
     //    MARK: - Private func

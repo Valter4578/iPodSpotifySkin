@@ -36,6 +36,8 @@ struct iPodView: View {
                 viewModel.nextPressed()
             }, menuButtonPressed: {
                 viewModel.menuPressed()
+            }, playPausePressed: {
+                viewModel.playPausePressed()
             })
             .frame(width: 230, height: 230, alignment: .center)
         }
