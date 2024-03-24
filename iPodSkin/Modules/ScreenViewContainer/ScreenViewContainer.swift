@@ -12,19 +12,19 @@ struct ScreenViewContainer<T: View>: View {
     var daugtherView: T
     var isHalfView: Bool = false
     var title: String
-
+    
     init(title: String, @ViewBuilder daugtherView: () -> T) {
         self.daugtherView = daugtherView()
         self.title = title
     }
-
+    
     var body: some View {
         VStack(spacing: 0, content: {
             ScreenContainerTopBarView(title: title)
             
-            NavigationView {
-                daugtherView                
-            }
+            NavigationStack(root: {
+                daugtherView
+            })
         })
         .clipShape(
             RoundedRectangle(cornerRadius: 10)

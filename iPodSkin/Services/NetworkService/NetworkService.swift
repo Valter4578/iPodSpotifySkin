@@ -16,7 +16,7 @@ protocol Networkable: AnyObject {
     var accessTokenPublisher: Published<String?>.Publisher { get }
     var provider: MoyaProvider<APIManager> { get }
     
-    func getAlbums(limit: Int, offset: Int) -> AnyPublisher<AlbumResponse, Error>
+    func getAlbums(limit: Int, offset: Int) async -> AnyPublisher<AlbumResponse, Error>
     func getCurrentPlaying() -> AnyPublisher<CurrentPlayingResponse, Error>
     func getPlaylists(limit: Int, offset: Int, completionHandler: @escaping (Result<Any, Error>) -> ())
     
@@ -44,7 +44,7 @@ class NetworkService: Networkable {
     )
     
     // MARK: - Functions
-    func getAlbums(limit: Int, offset: Int = 0) -> AnyPublisher<AlbumResponse, Error> {
+    func getAlbums(limit: Int, offset: Int = 0) async -> AnyPublisher<AlbumResponse, Error> {
         Future<AlbumResponse, Error> { promise in
             self.provider.requestPublisher(.userAlbums(limit: limit, offset: offset), callbackQueue: .global())
                 .sink(receiveCompletion: { completion in

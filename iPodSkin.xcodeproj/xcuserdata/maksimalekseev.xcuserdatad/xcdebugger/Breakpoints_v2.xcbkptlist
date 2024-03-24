@@ -758,8 +758,8 @@
             filePath = "iPodSkin/Services/SpotifyService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "156"
-            endingLineNumber = "156"
+            startingLineNumber = "159"
+            endingLineNumber = "159"
             landmarkName = "appRemoteDidEstablishConnection(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -774,8 +774,8 @@
             filePath = "iPodSkin/Services/SpotifyService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
             landmarkName = "connect()"
             landmarkType = "7">
          </BreakpointContent>
@@ -790,8 +790,8 @@
             filePath = "iPodSkin/Services/SpotifyService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "165"
-            endingLineNumber = "165"
+            startingLineNumber = "168"
+            endingLineNumber = "168"
             landmarkName = "appRemote(_:didFailConnectionAttemptWithError:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -806,8 +806,8 @@
             filePath = "iPodSkin/Services/SpotifyService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "169"
-            endingLineNumber = "169"
+            startingLineNumber = "172"
+            endingLineNumber = "172"
             landmarkName = "appRemote(_:didDisconnectWithError:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -822,8 +822,8 @@
             filePath = "iPodSkin/Services/SpotifyService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "173"
-            endingLineNumber = "173"
+            startingLineNumber = "176"
+            endingLineNumber = "176"
             landmarkName = "playerStateDidChange(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -838,8 +838,8 @@
             filePath = "iPodSkin/Services/SpotifyService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
             landmarkName = "handleAccessToken(from:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -854,8 +854,8 @@
             filePath = "iPodSkin/Services/SpotifyService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
             landmarkName = "handleAccessToken(from:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -870,8 +870,8 @@
             filePath = "iPodSkin/Services/SpotifyService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "172"
-            endingLineNumber = "172"
+            startingLineNumber = "175"
+            endingLineNumber = "175"
             landmarkName = "playerStateDidChange(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -902,8 +902,8 @@
             filePath = "iPodSkin/Services/SpotifyService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "157"
-            endingLineNumber = "157"
+            startingLineNumber = "160"
+            endingLineNumber = "160"
             landmarkName = "appRemoteDidEstablishConnection(_:)"
             landmarkType = "7">
             <Locations>
@@ -950,8 +950,8 @@
             filePath = "iPodSkin/Services/SpotifyService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "161"
-            endingLineNumber = "161"
+            startingLineNumber = "164"
+            endingLineNumber = "164"
             landmarkName = "appRemoteDidEstablishConnection(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -966,8 +966,8 @@
             filePath = "iPodSkin/Services/SpotifyService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
             landmarkName = "fetchPlayerState()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1030,8 +1030,8 @@
             filePath = "iPodSkin/Services/SpotifyService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "140"
-            endingLineNumber = "140"
+            startingLineNumber = "143"
+            endingLineNumber = "143"
             landmarkName = "obtainAccessToken()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1046,8 +1046,8 @@
             filePath = "iPodSkin/Services/SpotifyService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "148"
-            endingLineNumber = "148"
+            startingLineNumber = "151"
+            endingLineNumber = "151"
             landmarkName = "obtainAccessToken()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1062,8 +1062,8 @@
             filePath = "iPodSkin/Services/SpotifyService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "141"
-            endingLineNumber = "141"
+            startingLineNumber = "144"
+            endingLineNumber = "144"
             landmarkName = "obtainAccessToken()"
             landmarkType = "7">
             <Locations>
@@ -1098,22 +1098,6 @@
                   offsetFromSymbolStart = "1580">
                </Location>
             </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "1654431E-20A1-4201-8E93-2A9E6AEB4249"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "iPodSkin/Services/SpotifyService.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
-            landmarkName = "connect()"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1279,22 +1263,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "06B99EC5-0F34-4583-9160-0081D4705F03"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "iPodSkin/Services/NetworkService/NetworkService.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
-            landmarkName = "getAlbums(limit:offset:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "9F6D1FB7-B4D1-42A2-B84A-756F5F4E2DF1"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -1306,53 +1274,6 @@
             endingLineNumber = "73"
             landmarkName = "getCurrentPlaying()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "9F6D1FB7-B4D1-42A2-B84A-756F5F4E2DF1 - d3d5d6a746a195a1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 ((Swift.Result&lt;iPodSkin.CurrentPlayingResponse, Swift.Error&gt;) -&gt; ()) -&gt; () in iPodSkin.NetworkService.getCurrentPlaying() -&gt; Combine.AnyPublisher&lt;iPodSkin.CurrentPlayingResponse, Swift.Error&gt;"
-                  moduleName = "iPodSkin"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/maksimalekseev/Documents/dev.nosync/ios/iPodSkin/iPodSkin/Services/NetworkService/NetworkService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "73"
-                  endingLineNumber = "73"
-                  offsetFromSymbolStart = "864">
-               </Location>
-               <Location
-                  uuid = "9F6D1FB7-B4D1-42A2-B84A-756F5F4E2DF1 - a984909d788e9bf0"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Combine.Subscribers.Completion&lt;Moya.MoyaError&gt;) -&gt; () in closure #1 ((Swift.Result&lt;iPodSkin.CurrentPlayingResponse, Swift.Error&gt;) -&gt; ()) -&gt; () in iPodSkin.NetworkService.getCurrentPlaying() -&gt; Combine.AnyPublisher&lt;iPodSkin.CurrentPlayingResponse, Swift.Error&gt;"
-                  moduleName = "iPodSkin"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/maksimalekseev/Documents/dev.nosync/ios/iPodSkin/iPodSkin/Services/NetworkService/NetworkService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "74"
-                  endingLineNumber = "74"
-                  offsetFromSymbolStart = "112">
-               </Location>
-               <Location
-                  uuid = "9F6D1FB7-B4D1-42A2-B84A-756F5F4E2DF1 - a984909d788e9b11"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Combine.Subscribers.Completion&lt;Moya.MoyaError&gt;) -&gt; () in closure #1 ((Swift.Result&lt;iPodSkin.CurrentPlayingResponse, Swift.Error&gt;) -&gt; ()) -&gt; () in iPodSkin.NetworkService.getCurrentPlaying() -&gt; Combine.AnyPublisher&lt;iPodSkin.CurrentPlayingResponse, Swift.Error&gt;"
-                  moduleName = "iPodSkin"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/maksimalekseev/Documents/dev.nosync/ios/iPodSkin/iPodSkin/Services/NetworkService/NetworkService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "73"
-                  endingLineNumber = "73"
-                  offsetFromSymbolStart = "212">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1400,6 +1321,242 @@
             startingLineNumber = "85"
             endingLineNumber = "85"
             landmarkName = "updateProgress()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "555A10B7-8F96-4F6A-890F-6AD700321B37"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iPodSkin/Modules/iPod/View/iPodView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9FA45948-9523-4671-9994-B411647E0805"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iPodSkin/Modules/CoverFlow/CoverFlowContainerView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "9FA45948-9523-4671-9994-B411647E0805 - b38a9d1ff1cc6be9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #2 @Sendable () async -&gt; () in closure #1 (iPodSkin.Album) -&gt; &lt;&lt;opaque return type of SwiftUI.View.task(priority: Swift.TaskPriority, _: @Sendable () async -&gt; ()) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; iPodSkin.CoverFlowView&lt;&lt;&lt;opaque return type of SwiftUI.View.task(priority: Swift.TaskPriority, _: @Sendable () async -&gt; ()) -&gt; some&gt;&gt;.0&gt; in closure #1 (SwiftUI.GeometryProxy) -&gt; &lt;&lt;opaque return type of SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.GeometryReader&lt;&lt;&lt;opaque return type of SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0&gt; in iPodSkin.CoverFlowContainerView.body.getter : some"
+                  moduleName = "iPodSkin"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maksimalekseev/Documents/dev.nosync/ios/iPodSkin/iPodSkin/Modules/CoverFlow/CoverFlowContainerView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "1260">
+               </Location>
+               <Location
+                  uuid = "9FA45948-9523-4671-9994-B411647E0805 - b38a9d1ff1cc6bce"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #2 @Sendable () async -&gt; () in closure #1 (iPodSkin.Album) -&gt; &lt;&lt;opaque return type of SwiftUI.View.task(priority: Swift.TaskPriority, _: @Sendable () async -&gt; ()) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; iPodSkin.CoverFlowView&lt;&lt;&lt;opaque return type of SwiftUI.View.task(priority: Swift.TaskPriority, _: @Sendable () async -&gt; ()) -&gt; some&gt;&gt;.0&gt; in closure #1 (SwiftUI.GeometryProxy) -&gt; &lt;&lt;opaque return type of SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.GeometryReader&lt;&lt;&lt;opaque return type of SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0&gt; in iPodSkin.CoverFlowContainerView.body.getter : some"
+                  moduleName = "iPodSkin"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maksimalekseev/Documents/dev.nosync/ios/iPodSkin/iPodSkin/Modules/CoverFlow/CoverFlowContainerView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "1444">
+               </Location>
+               <Location
+                  uuid = "9FA45948-9523-4671-9994-B411647E0805 - f8260b125f207084"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for closure #2 @Sendable () async -&gt; () in closure #1 (iPodSkin.Album) -&gt; &lt;&lt;opaque return type of SwiftUI.View.task(priority: Swift.TaskPriority, _: @Sendable () async -&gt; ()) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; iPodSkin.CoverFlowView&lt;&lt;&lt;opaque return type of SwiftUI.View.task(priority: Swift.TaskPriority, _: @Sendable () async -&gt; ()) -&gt; some&gt;&gt;.0&gt; in closure #1 (SwiftUI.GeometryProxy) -&gt; &lt;&lt;opaque return type of SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.GeometryReader&lt;&lt;&lt;opaque return type of SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0&gt; in iPodSkin.CoverFlowContainerView.body.getter : some"
+                  moduleName = "iPodSkin"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maksimalekseev/Documents/dev.nosync/ios/iPodSkin/iPodSkin/Modules/CoverFlow/CoverFlowContainerView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "9FA45948-9523-4671-9994-B411647E0805 - 79329219ee122f48"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #2 @Sendable () async -&gt; () in closure #1 (iPodSkin.Album) -&gt; &lt;&lt;opaque return type of SwiftUI.View.task(priority: Swift.TaskPriority, _: @Sendable () async -&gt; ()) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; iPodSkin.CoverFlowView&lt;&lt;&lt;opaque return type of SwiftUI.View.task(priority: Swift.TaskPriority, _: @Sendable () async -&gt; ()) -&gt; some&gt;&gt;.0&gt; in closure #1 (SwiftUI.GeometryProxy) -&gt; &lt;&lt;opaque return type of SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.GeometryReader&lt;&lt;&lt;opaque return type of SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0&gt; in iPodSkin.CoverFlowContainerView.body.getter : some"
+                  moduleName = "iPodSkin"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maksimalekseev/Documents/dev.nosync/ios/iPodSkin/iPodSkin/Modules/CoverFlow/CoverFlowContainerView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "40">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "06065A45-A465-49F9-A8DA-8B3C4503A965"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iPodSkin/Modules/CoverFlow/CoverFlowViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "fetchAlbumList(limit:offsetCoff:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "06065A45-A465-49F9-A8DA-8B3C4503A965 - b36f1574ec4ff986"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (iPodSkin.AlbumResponse) -&gt; () in iPodSkin.CoverFlowViewModel.fetchAlbumList(limit: Swift.Int, offset: Swift.Int) -&gt; ()"
+                  moduleName = "iPodSkin"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maksimalekseev/Documents/dev.nosync/ios/iPodSkin/iPodSkin/Modules/CoverFlow/CoverFlowViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "200">
+               </Location>
+               <Location
+                  uuid = "06065A45-A465-49F9-A8DA-8B3C4503A965 - bd7fde94b884ce92"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (iPodSkin.AlbumResponse) -&gt; () in iPodSkin.CoverFlowViewModel.fetchAlbumList(limit: Swift.Int, offset: Swift.Int) async -&gt; ()"
+                  moduleName = "iPodSkin"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maksimalekseev/Documents/dev.nosync/ios/iPodSkin/iPodSkin/Modules/CoverFlow/CoverFlowViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "200">
+               </Location>
+               <Location
+                  uuid = "06065A45-A465-49F9-A8DA-8B3C4503A965 - 72492aa8e4de9875"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (iPodSkin.AlbumResponse) -&gt; () in iPodSkin.CoverFlowViewModel.fetchAlbumList(limit: Swift.Int, offsetCoff: Swift.Int) async -&gt; ()"
+                  moduleName = "iPodSkin"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maksimalekseev/Documents/dev.nosync/ios/iPodSkin/iPodSkin/Modules/CoverFlow/CoverFlowViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "200">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BB373CF8-B21E-4954-B189-4801F11D2423"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iPodSkin/Modules/CoverFlow/CoverFlowViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "fetchAlbumList(limit:offsetCoff:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BB373CF8-B21E-4954-B189-4801F11D2423 - fdef4f906f3f6abe"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for iPodSkin.CoverFlowViewModel.fetchAlbumList(limit: Swift.Int, offset: Swift.Int) async -&gt; ()"
+                  moduleName = "iPodSkin"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maksimalekseev/Documents/dev.nosync/ios/iPodSkin/iPodSkin/Modules/CoverFlow/CoverFlowViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  uuid = "BB373CF8-B21E-4954-B189-4801F11D2423 - 2f3195fa740235b8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for iPodSkin.CoverFlowViewModel.fetchAlbumList(limit: Swift.Int, offset: Swift.Int) async -&gt; ()"
+                  moduleName = "iPodSkin"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maksimalekseev/Documents/dev.nosync/ios/iPodSkin/iPodSkin/Modules/CoverFlow/CoverFlowViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "BB373CF8-B21E-4954-B189-4801F11D2423 - 9378205e9b9b8ea0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for iPodSkin.CoverFlowViewModel.fetchAlbumList(limit: Swift.Int, offset: Swift.Int) async -&gt; ()"
+                  moduleName = "iPodSkin"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maksimalekseev/Documents/dev.nosync/ios/iPodSkin/iPodSkin/Modules/CoverFlow/CoverFlowViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "116">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "97AC51C1-0DF2-4C3C-9C08-81B80139114E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iPodSkin/Modules/CoverFlow/CoverFlowViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "fetchAlbumList(limit:offsetCoff:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

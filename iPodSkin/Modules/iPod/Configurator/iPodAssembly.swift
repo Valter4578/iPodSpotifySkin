@@ -13,8 +13,9 @@ final class iPodAssembly {
         let networkService = NetworkService()
         
         let viewModel = iPodViewModel(spotifyService: spotifyService, networkService: networkService)
+//        let ipodView = iPodView(viewModel: viewModel)
+
         let ipodView = iPodView(viewModel: viewModel)
-        
         return ipodView
     }
 }

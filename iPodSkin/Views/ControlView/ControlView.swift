@@ -28,7 +28,7 @@ struct ControlView: View {
             VStack(spacing: 0) {
                 Button(action: {
                     UIImpactFeedbackGenerator(style: .light).impactOccurred()
-                    print("Menu buttom pressed")
+                    menuButtonPressed()
                 }, label: {
                     Text("MENU")
                         .font(.system(size: 16, weight: .bold, design: .default))

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 
 struct CurrentPlayingView: View {
     @ObservedObject var viewModel: CurrentPlayingViewModel
@@ -14,6 +15,10 @@ struct CurrentPlayingView: View {
     @State var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     @State var currentPlayingSeconds: Int = 0
     
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @Environment(\.modalMode) var modalMode
+    
+    @State private var subscription = Set<AnyCancellable>()
     var body: some View {
         GeometryReader { geo in
             VStack {
@@ -70,6 +75,21 @@ struct CurrentPlayingView: View {
         }
         .onAppear(perform: {
             viewModel.onAppear()
+//            onModalChange
+//                .sink { bool in
+//                    if bool {
+//                        presentationMode.wrappedValue.dismiss()
+//                    }
+            //                }
+            modalMode
+                .print("Modal mode")
+                .sink { shouldShow in
+                    print(shouldShow)
+                    if !shouldShow {
+                        presentationMode.wrappedValue.dismiss()
+                    }
+                }
+                .store(in: &subscription)
         })
     }
 }

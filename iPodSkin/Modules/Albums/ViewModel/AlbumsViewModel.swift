@@ -25,8 +25,8 @@ class AlbumsViewModel: ObservableObject {
     
     
     // MARK: - Functions
-    func fetchAlbumList(limit: Int = 50) {
-        networkService.getAlbums(limit: limit, offset: 0)
+    func fetchAlbumList(limit: Int = 50) async {
+        await networkService.getAlbums(limit: limit, offset: 0)
             .receive(on: DispatchQueue.main)
             .sink { completion in
                 if case .failure(let error) = completion {
@@ -42,9 +42,11 @@ class AlbumsViewModel: ObservableObject {
     
     func onAppear() {
         networkService.accessTokenPublisher
-            .sink { [weak self] accesstToken in
+            .sink { accesstToken in
                 print(accesstToken)
-                self?.fetchAlbumList(limit: 20)
+                Task {
+                    await self.fetchAlbumList(limit: 20)
+                }
             }
             .store(in: &cancellables)
     }

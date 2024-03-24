@@ -47,12 +47,15 @@ class SpotifyService: NSObject, ObservableObject {
     
     // MARK: - Functions
     func connect() {
-        guard let _ = self.appRemote.connectionParameters.accessToken else {
-            self.appRemote.authorizeAndPlayURI("", asRadio: false, additionalScopes: stringScopes)
-            return
+        DispatchQueue.global(qos: .userInitiated).async {
+            guard let _ = self.appRemote.connectionParameters.accessToken else {
+                self.appRemote.authorizeAndPlayURI("", asRadio: false, additionalScopes: self.stringScopes)
+                return 
+            }
+            
+            self.appRemote.connect()
+            
         }
-        
-        self.appRemote.connect()
     }
     
     func disconnect() {

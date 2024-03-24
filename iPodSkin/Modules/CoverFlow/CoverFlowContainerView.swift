@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CoverFlowContainerView: View {
     @ObservedObject var viewModel: CoverFlowViewModel
+    @State private var callOffset: Int = 0
     var body: some View {
         VStack {
             GeometryReader { geo in
@@ -19,6 +20,12 @@ struct CoverFlowContainerView: View {
                                   items: viewModel.albums) { album in
                         AsyncImage(url: URL(string: album.images[0].url)) { image in
                             image.image?.resizable()
+                        }
+                        .task {
+                            if album.id == viewModel.albums.last?.id {
+                                callOffset += 1
+                                await viewModel.fetchAlbumList(limit: 20, offsetCoff: callOffset)
+                            }
                         }
                     }
                 }
