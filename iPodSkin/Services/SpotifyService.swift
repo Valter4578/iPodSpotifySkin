@@ -13,7 +13,6 @@ class SpotifyService: NSObject, ObservableObject {
     // MARK: - Variables
     private let spotifyClientID = "6c212878ea394187a8a11c2a1f0c5d5d"
     private let spotifyRedirectURL = URL(string: "spotify-ios-quick-start://spotify-login-callback")!
-    @Published var accessToken = ""
     private let secterKey = "7448a7dd574f4906b7d44f1308d214b7"
     
     private let stringScopes = [
@@ -26,6 +25,7 @@ class SpotifyService: NSObject, ObservableObject {
         "user-follow-read", "user-follow-modify",
     ]
     
+    @Published var accessToken = ""
     var playURI = ""
     
     lazy var appRemote: SPTAppRemote = {
@@ -47,15 +47,12 @@ class SpotifyService: NSObject, ObservableObject {
     
     // MARK: - Functions
     func connect() {
-        DispatchQueue.global(qos: .userInitiated).async {
-            guard let _ = self.appRemote.connectionParameters.accessToken else {
-                self.appRemote.authorizeAndPlayURI("", asRadio: false, additionalScopes: self.stringScopes)
-                return 
-            }
-            
-            self.appRemote.connect()
-            
+        guard let _ = self.appRemote.connectionParameters.accessToken else {
+            self.appRemote.authorizeAndPlayURI("", asRadio: false, additionalScopes: self.stringScopes)
+            return
         }
+        
+        self.appRemote.connect()
     }
     
     func disconnect() {

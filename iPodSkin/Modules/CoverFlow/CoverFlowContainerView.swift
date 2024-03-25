@@ -18,7 +18,7 @@ struct CoverFlowContainerView: View {
                                   spacing: -20,
                                   rotation: 45,
                                   items: viewModel.albums) { album in
-                        AsyncImage(url: URL(string: album.images[0].url)) { image in
+                        CacheAsyncImage(url: URL(string: album.images[0].url)) { image in
                             image.image?.resizable()
                         }
                         .task {
