@@ -130,6 +130,13 @@ class SpotifyService: NSObject, ObservableObject {
         isPaused ? appRemote.playerAPI?.resume() : appRemote.playerAPI?.pause()
     }
     
+    func playTrack(trackURI: String) {
+        appRemote.playerAPI?.play(trackURI, asRadio: true, callback: { _, error in
+            if let error = error {
+                print(error.localizedDescription)
+            }
+        })
+    }
     //    MARK: - Private func
     private func saveAccessToken(_ accessToken: String) {
         UserDefaults.standard.setValue(accessToken, forKey: "accessToken")

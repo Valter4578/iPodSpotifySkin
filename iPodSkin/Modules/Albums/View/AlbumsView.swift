@@ -15,7 +15,7 @@ struct AlbumsView: View {
             VStack(spacing: 0, content: {
                 ForEach(Array(zip(viewModel.albums.indices, viewModel.albums)), id: \.0) { index, item in
                     NavigationLink {
-                        AlbumDetailConfigurator.configureAlbumDetailView(with: item)
+                        AlbumDetailConfigurator.configureAlbumDetailView(with: item, spotifyService: viewModel.spotifyService)
                     } label: {
                         AlbumsItemView(imageUrl: item.images[0].url, title: item.name, artistName: item.artists[0].name)
                     }

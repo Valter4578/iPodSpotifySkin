@@ -11,18 +11,19 @@ import Combine
 class AlbumsViewModel: ObservableObject {
     // MARK: - Dependencies
     private var networkService: Networkable
+    var spotifyService: SpotifyService
     
     // MARK: - Init
-    init(albums: [Album] = [], networkService: Networkable = NetworkService()) {
+    init(albums: [Album] = [], networkService: Networkable = NetworkService(), spotifyService: SpotifyService) {
         self.networkService = networkService
         self.albums = albums
+        self.spotifyService = spotifyService
     }
     
     // MARK: - Properties
     private var cancellables = Set<AnyCancellable>()
     private var albumResponse: AlbumResponse?
     @Published var albums: [Album] = []
-    
     
     // MARK: - Functions
     func fetchAlbumList(limit: Int = 50) async {

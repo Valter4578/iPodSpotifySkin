@@ -9,8 +9,8 @@ import Foundation
 import SwiftUI
 
 class HomeMenuRouter {
-    static func destinationForAlbumList(using networkService: Networkable) -> some View {
-        return AlbumsConfigurator.configureAlbumsView(with: AlbumsViewModel(networkService: networkService))
+    static func destinationForAlbumList(using networkService: Networkable, spotifyService: SpotifyService) -> some View {
+        return AlbumsConfigurator.configureAlbumsView(with: AlbumsViewModel(networkService: networkService, spotifyService: spotifyService))
     }
     
     static func destinationForCoverFlow(using networkService: Networkable) -> some View {

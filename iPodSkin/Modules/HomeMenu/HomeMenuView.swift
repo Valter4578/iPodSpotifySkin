@@ -24,7 +24,7 @@ struct HomeMenuView: View {
                     }
                     
                     NavigationLink {
-                        HomeMenuRouter.destinationForAlbumList(using: viewModel.networkService)
+                        HomeMenuRouter.destinationForAlbumList(using: viewModel.networkService, spotifyService: viewModel.spotifyService)
                     } label: {
                         Text("Albums list")
                             .font(.system(size: 16, weight: .bold))

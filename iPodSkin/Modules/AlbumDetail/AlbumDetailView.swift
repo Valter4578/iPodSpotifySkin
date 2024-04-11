@@ -14,6 +14,9 @@ struct AlbumDetailView: View {
             VStack(spacing: 5, content: {
                 ForEach(Array(zip(viewModel.getTracklist().indices, viewModel.getTracklist())), id: \.0) { index, item in
                     TrackItemView(title: item.name)
+                        .onTapGesture {
+                            viewModel.playTrack(item: item)
+                        }
                 }
                 .padding(.leading, 5)
             })
