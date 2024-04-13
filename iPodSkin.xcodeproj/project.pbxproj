@@ -32,6 +32,8 @@
 		88C171382B5C1EB000D009B3 /* AlbumDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C171372B5C1EB000D009B3 /* AlbumDetailViewModel.swift */; };
 		88C1713A2B5C1F4800D009B3 /* TrackItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C171392B5C1F4800D009B3 /* TrackItemView.swift */; };
 		88C1713C2B5C20E100D009B3 /* AlbumDetailConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C1713B2B5C20E100D009B3 /* AlbumDetailConfigurator.swift */; };
+		88C5043F2BC9579E00F043EA /* Color+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C5043E2BC9579E00F043EA /* Color+Colors.swift */; };
+		88C504432BC95CB100F043EA /* CoverFlowDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C504422BC95CB100F043EA /* CoverFlowDetailView.swift */; };
 		88C664462B18A45B0054ED34 /* ScreenViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C664452B18A45B0054ED34 /* ScreenViewContainer.swift */; };
 		88DBE8DA2B79074B00362AEE /* CurrentPlayingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DBE8D92B79074B00362AEE /* CurrentPlayingView.swift */; };
 		88DBE8DF2B79115A00362AEE /* CurrentPlayingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DBE8DE2B79115A00362AEE /* CurrentPlayingViewModel.swift */; };
@@ -84,6 +86,8 @@
 		88C171372B5C1EB000D009B3 /* AlbumDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailViewModel.swift; sourceTree = "<group>"; };
 		88C171392B5C1F4800D009B3 /* TrackItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackItemView.swift; sourceTree = "<group>"; };
 		88C1713B2B5C20E100D009B3 /* AlbumDetailConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailConfigurator.swift; sourceTree = "<group>"; };
+		88C5043E2BC9579E00F043EA /* Color+Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Colors.swift"; sourceTree = "<group>"; };
+		88C504422BC95CB100F043EA /* CoverFlowDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverFlowDetailView.swift; sourceTree = "<group>"; };
 		88C664452B18A45B0054ED34 /* ScreenViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenViewContainer.swift; sourceTree = "<group>"; };
 		88DBE8D92B79074B00362AEE /* CurrentPlayingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentPlayingView.swift; sourceTree = "<group>"; };
 		88DBE8DE2B79115A00362AEE /* CurrentPlayingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentPlayingViewModel.swift; sourceTree = "<group>"; };
@@ -131,6 +135,7 @@
 		8820955B2AFE1E0000CD3A46 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				88C504412BC95C9500F043EA /* CoverFlowDetail */,
 				88DBE8D82B79073B00362AEE /* CurrentPlaying */,
 				88AAF9712B5FE22000501120 /* HomeMenu */,
 				88F1A9E02B5E442500B7E577 /* CoverFlow */,
@@ -230,6 +235,7 @@
 		88A1E1282AF7721B00E93557 /* iPodSkin */ = {
 			isa = PBXGroup;
 			children = (
+				88C5043D2BC9579000F043EA /* Extensions */,
 				88F615AB2B04ED5B00D4A751 /* Model */,
 				88F6156F2B03C5F200D4A751 /* Views */,
 				88A1E1372AF7746500E93557 /* SpotifyiOS.framework */,
@@ -281,6 +287,22 @@
 				88C1713B2B5C20E100D009B3 /* AlbumDetailConfigurator.swift */,
 			);
 			path = AlbumDetail;
+			sourceTree = "<group>";
+		};
+		88C5043D2BC9579000F043EA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				88C5043E2BC9579E00F043EA /* Color+Colors.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		88C504412BC95C9500F043EA /* CoverFlowDetail */ = {
+			isa = PBXGroup;
+			children = (
+				88C504422BC95CB100F043EA /* CoverFlowDetailView.swift */,
+			);
+			path = CoverFlowDetail;
 			sourceTree = "<group>";
 		};
 		88C664442B18A4480054ED34 /* ScreenViewContainer */ = {
@@ -489,7 +511,9 @@
 				88F6159E2B03C68600D4A751 /* ControlView.swift in Sources */,
 				88BA54632B18A94100B675D4 /* ScreenContainerTopBarView.swift in Sources */,
 				88EDC9262BB1296F00893B6E /* CacheEntryObject.swift in Sources */,
+				88C504432BC95CB100F043EA /* CoverFlowDetailView.swift in Sources */,
 				88F1A9E42B5E449A00B7E577 /* CoverFlowContainerView.swift in Sources */,
+				88C5043F2BC9579E00F043EA /* Color+Colors.swift in Sources */,
 				88009FEB2B89F9BE00AF96FB /* CurrentPlayingProgressBarView.swift in Sources */,
 				886E9B562B0CB9F400FA3485 /* iPodAssembly.swift in Sources */,
 				88F6159F2B03C68600D4A751 /* ActionButtonView.swift in Sources */,

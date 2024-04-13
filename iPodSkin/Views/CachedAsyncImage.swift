@@ -30,11 +30,8 @@ struct CacheAsyncImage<Content>: View where Content: View {
     var body: some View {
         if let url = url {
             if let cached = imageCache[url] {
-                let _ = print("cached \(url.absoluteString)")
-                //            content(.success(Image(uiImage: image)))
                 content(.success(cached.image))
             } else {
-                let _ = print("request \(url.absoluteString)")
                 AsyncImage(
                     url: url,
                     scale: scale,

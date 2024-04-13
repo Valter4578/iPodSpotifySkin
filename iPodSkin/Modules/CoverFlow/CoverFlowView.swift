@@ -7,44 +7,59 @@
 
 import SwiftUI
 
+struct CoverFlowItem {
+    var flipped: Bool = false
+    var data: Album
+}
+
 struct CoverFlowView<Content: View>: View {
     // Customizable properties
-    var itemWidth: CGFloat
+    @State var itemWidth: CGFloat
     var spacing: CGFloat = 10
     var rotation: Double
     
-    var items: [Album]
-    var content: (Album) -> Content
+    @State var coverItems: [CoverFlowItem]
+    var content: (CoverFlowItem) -> Content
     var body: some View {
         GeometryReader { geo in
             let size = geo.size
             
             ScrollView(.horizontal) {
                 LazyHStack(spacing: 0, content: {
-                    ForEach(items) { item in
+                    ForEach(coverItems, id: \.data.id) { coverItem in
                         VStack {
-                            content(item)
+                            content(coverItem)
                                 .frame(width: itemWidth, height: itemWidth)
-                                .reflection()
+                                .reflection(disabled: coverItem.flipped)
                                 .visualEffect { content, geometryProxy in
                                     content
-                                        .rotation3DEffect(.init(degrees: rotation(proxy: geometryProxy)), axis: (x: 0, y: 1, z: 0), anchor: .center)
+                                        .rotation3DEffect(coverItem.flipped ? .zero : .init(degrees: rotation(proxy: geometryProxy)), axis: (x: 0, y: 1, z: 0), anchor: .center)
                                 }
-                                .padding(.trailing, item.id == items.last?.id ? 0 : spacing)
+                                .padding(.trailing, coverItem.data.id == coverItems.last?.data.id ? 0 : spacing)
+                                .onTapGesture {
+                                    if let index = coverItems.firstIndex(where:  { $0.data.id == coverItem.data.id }) {
+                                        withAnimation {
+                                            coverItems[index].flipped.toggle()
+//                                            coverItem.flipped ? self.itemWidth += 70 : self.itemWidth += 70
+//                                            itemWidth += coverItem.flipped ? -70 : +70
+                                        }
+                                    }
+                                }
                             
                             VStack(spacing: 0) {
-                                Text(item.name)
+                                Text(coverItem.data.name)
                                     .font(.system(size: 16, weight: .bold))
                                     .foregroundStyle(.black)
                                     .multilineTextAlignment(.center)
                                     .lineLimit(1)
-                                Text(item.artists[0].name)
+                                Text(coverItem.data.artists[0].name)
                                     .font(.system(size: 14, weight: .regular))
                                     .foregroundStyle(.black)
                             }
                             .frame(width: itemWidth - 20)
                             .padding(.top, 20)
                         }
+                        
                     }
                 })
                 .padding(.horizontal, (size.width - itemWidth) / 2)
@@ -68,10 +83,11 @@ struct CoverFlowView<Content: View>: View {
         
         return cappedRotation - degree
     }
+    
 }
 
 private extension View {
-    @ViewBuilder func reflection() -> some View {
+    @ViewBuilder func reflection(disabled: Bool) -> some View {
         self
             .overlay {
                 GeometryReader {
@@ -88,12 +104,11 @@ private extension View {
                                         .white.opacity(0.5),
                                         .white.opacity(0.3),
                                         .white.opacity(0.1),
-//                                        .white.opacity(0),
                                     ] + Array(repeating: Color.clear, count: 3), startPoint: .top, endPoint: .bottom)
                                 )
                         }
                         .offset(y: size.height + 5)
-                        .opacity(0.5)
+                        .opacity(disabled ? 0.0 : 0.5)
                 }
             }
     }
