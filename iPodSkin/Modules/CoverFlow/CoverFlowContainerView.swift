@@ -18,7 +18,7 @@ struct CoverFlowContainerView: View {
                     CoverFlowView(itemWidth: 170,
                                   spacing: -20,
                                   rotation: 45,
-                                  coverItems: viewModel.albums.map { CoverFlowItem(data: $0) }) { coverItem in
+                                  coverItems: viewModel.coverItems) { coverItem in
                         getCoverItemView(item: coverItem)
                             .rotation3DEffect(coverItem.flipped ? Angle(degrees: 180) : .zero, axis: (x: 0, y: 1, z: 0), anchor: .center)
                             .scaleEffect(coverItem.flipped ? CGSize(width: 1.4, height: 1.4) : CGSize(width: 1.0, height: 1.0), anchor: .center)

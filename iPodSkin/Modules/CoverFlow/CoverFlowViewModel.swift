@@ -9,16 +9,17 @@ import Foundation
 import Combine
 
 class CoverFlowViewModel: ObservableObject {
-    @Published var albums: [Album] = []
     private var networkService: Networkable
+    private var cancellables: Set<AnyCancellable> = []
+    
+    @Published var albums: [Album] = []
+    @Published var callOffset: Int = 0
+    @Published var coverItems: [CoverFlowItem] = []
 
     init(albums: [Album], networkService: Networkable) {
         self.albums = albums
         self.networkService = networkService
     }
-
-    private var cancellables: Set<AnyCancellable> = []
-    @Published var callOffset: Int = 0
     
     // MARK: - Functions
     func fetchAlbumList(limit: Int = 50, offsetCoff: Int = 0) async {
@@ -29,8 +30,10 @@ class CoverFlowViewModel: ObservableObject {
                     print(error.localizedDescription)
                 }
             } receiveValue: { [weak self] response in
+                guard let self = self else { return }
                 let fetchedAlbums = response.items.map { $0.album }
-                self?.albums.append(contentsOf: fetchedAlbums)
+                self.albums.append(contentsOf: fetchedAlbums)
+                self.coverItems.append(contentsOf: self.albums.map { CoverFlowItem(data: $0) })
             }
             .store(in: &cancellables)
     }
@@ -44,7 +47,6 @@ class CoverFlowViewModel: ObservableObject {
                 }
             }
             .store(in: &cancellables)
-        
 //        $callOffset
 //            .filter { $0 != 0 }
 //            .sink { offset in

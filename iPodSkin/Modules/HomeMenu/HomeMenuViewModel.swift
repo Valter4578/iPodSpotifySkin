@@ -12,6 +12,7 @@ class HomeMenuViewModel: ObservableObject {
     var networkService: Networkable
     var spotifyService: SpotifyService
     
+    @Published var shouldNavigateToCurrentPlaying: Bool = false
     
     init(networkService: Networkable, spotifyService: SpotifyService) {
         self.networkService = networkService

@@ -116,15 +116,7 @@ class SpotifyService: NSObject, ObservableObject {
             print("Skipped track: \(result)")
         })
     }
-    
-//    func pause() {
-//        appRemote.playerAPI?.pause()
-//    }
-//    
-//    func play() {
-//        appRemote.playerAPI?.resume()
-//    }
-    
+
     func playPause() {
         guard let isPaused = lastPlayerState?.isPaused else { return }
         isPaused ? appRemote.playerAPI?.resume() : appRemote.playerAPI?.pause()
@@ -137,6 +129,7 @@ class SpotifyService: NSObject, ObservableObject {
             }
         })
     }
+    
     //    MARK: - Private func
     private func saveAccessToken(_ accessToken: String) {
         UserDefaults.standard.setValue(accessToken, forKey: "accessToken")
